@@ -4,6 +4,15 @@
 #include "Robot_Control/Robot_Control.h"
 #pragma once#include "afxwin.h"
 
+
+
+extern "C"
+{
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+}
+
 #define MAXTRIALS 90
 #define LOCATIONNUM 4
 
@@ -43,6 +52,9 @@ public:
 //	int trialNum[4] = {30, 30, 60, 90};
 	int current_trial_counter;
 	int condition_type;
+	int eventCount;
+	/* the Lua interpreter */
+	lua_State* L;
 	typedef struct
 	{
 		float x;

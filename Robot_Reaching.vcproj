@@ -44,12 +44,12 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\Slavik\Robot_Reaching\Robot_Reaching\PDIStuff"
+				AdditionalIncludeDirectories="C:\Slavik\Robot_Reaching\Robot_Reaching\PDIStuff;C:\lua\5.1\include;&quot;C:\Documents and Settings\mc-fdavid3\Desktop\2targetMemoryGuided\robot_3target\Robot_Reaching&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				UsePrecompiledHeader="2"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
@@ -68,8 +68,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Robot_Control.lib PDIStuff/PDI.lib Winmm.lib"
+				AdditionalDependencies="Robot_Control.lib PDIStuff/PDI.lib Winmm.lib lua5.1.lib"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="C:\lua\5.1\lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -194,6 +195,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\luautils.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Robot_Reaching.cpp"
 				>
 			</File>
@@ -227,6 +232,10 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\luautils.h"
+				>
+			</File>
 			<File
 				RelativePath=".\Resource.h"
 				>

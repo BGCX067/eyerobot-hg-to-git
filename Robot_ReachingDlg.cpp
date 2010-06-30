@@ -13,6 +13,11 @@
 #include "stdafx.h"
 #include "Robot_Reaching.h"
 #include "Robot_ReachingDlg.h"
+
+
+#include "luautils.h"
+
+
 //polhemus stuff...
 //#include "PDI.h"
 //#include "pdifunc.h"
@@ -20,6 +25,7 @@
 #include <mmsystem.h>
 #include <algorithm>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -505,7 +511,7 @@ void CRobot_ReachingDlg::OnBnClickedButton1()
 	/*turn off 'Next Trial' and 'redo trial'*/
 	CWnd * pbutton = GetDlgItem( IDC_BUTTON1);
 	LARGE_INTEGER sample1, sample2, frequency;
-	double elapsedTime = 0.0;
+	LONGLONG elapsedTime;
 	pbutton->EnableWindow(false);
 	pbutton = GetDlgItem( IDC_BUTTON4);
 	pbutton->EnableWindow(false);	
@@ -867,7 +873,8 @@ void CRobot_ReachingDlg::OnBnClickedButton1()
 
 /*********** Initialize ****************/
 void CRobot_ReachingDlg::OnBnClickedButton2()
-{	
+{
+
 	/*check for condition*/
 	if( radbut1.GetCheck() == BST_CHECKED)
 		condition_type = 1;
@@ -912,6 +919,26 @@ void CRobot_ReachingDlg::OnBnClickedButton2()
 			("Folder exists!Do you want to overwrite files?"), MB_YESNO, -1)){
 				return;}
 	}
+
+	
+	/* initialize Lua */
+	L = lua_open();
+
+	/* load Lua base libraries */
+	luaL_openlibs(L);
+
+	/* run the script */
+	luaL_dofile(L, "C:/lua/5.1/config.lua");
+
+
+
+	/* Read the number of images */  
+	int luaInd = 888;
+	luaInd = lua_intexpr( L, "#config.eventType", &eventCount ) ; 
+
+	/* cleanup Lua */
+	lua_close(L);
+
 	
 	pitem->EnableWindow(false);
 	//CreateDirectory( folderName, NULL ); 
@@ -928,8 +955,9 @@ void CRobot_ReachingDlg::OnBnClickedButton2()
 
 	//initialized = true;		//set flag if connected to tracker
 
-	CString tempstr(""),str("");
-	tempstr = "=>Connecting to the Robot...\n";
+	CString tempstr,str("");
+	tempstr.Format(_T("%d"), eventCount);
+	tempstr = _T("=>Number of events = ") + tempstr + _T("\n=>Connecting to the Robot...\n");
 	SetDlgItemText(IDC_STATIC2, tempstr );
 
 	/*Connect to robot*/
