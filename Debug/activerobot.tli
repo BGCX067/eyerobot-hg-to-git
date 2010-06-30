@@ -1,0 +1,1788 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.50727.762 (7f1d58d5).
+//
+// c:\documents and settings\mc-fdavid3\desktop\2targetmemoryguided\robot_3target\robot_reaching\debug\activerobot.tli
+//
+// Wrapper implementations for Win32 type library C:\Program Files\CRS Robotics\ActiveRobot\ActiveRobot.dll
+// compiler-generated file created 11/13/09 at 11:08:20 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ICRSLocation wrapper method implementations
+//
+
+inline enum locClass ICRSLocation::GetClass ( ) {
+    enum locClass _result;
+    HRESULT _hr = get_Class(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::PutClass ( enum locClass pVal ) {
+    HRESULT _hr = put_Class(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum locFlags ICRSLocation::GetFlags ( ) {
+    enum locFlags _result;
+    HRESULT _hr = get_Flags(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::PutFlags ( enum locFlags pVal ) {
+    HRESULT _hr = put_Flags(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum locRobotType ICRSLocation::GetRobotType ( ) {
+    enum locRobotType _result;
+    HRESULT _hr = get_RobotType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::PutRobotType ( enum locRobotType pVal ) {
+    HRESULT _hr = put_RobotType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getx ( ) {
+    float _result = 0;
+    HRESULT _hr = get_x(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putx ( float pVal ) {
+    HRESULT _hr = put_x(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Gety ( ) {
+    float _result = 0;
+    HRESULT _hr = get_y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Puty ( float pVal ) {
+    HRESULT _hr = put_y(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getz ( ) {
+    float _result = 0;
+    HRESULT _hr = get_z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putz ( float pVal ) {
+    HRESULT _hr = put_z(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getzrot ( ) {
+    float _result = 0;
+    HRESULT _hr = get_zrot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putzrot ( float pVal ) {
+    HRESULT _hr = put_zrot(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getyrot ( ) {
+    float _result = 0;
+    HRESULT _hr = get_yrot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putyrot ( float pVal ) {
+    HRESULT _hr = put_yrot(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getxrot ( ) {
+    float _result = 0;
+    HRESULT _hr = get_xrot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putxrot ( float pVal ) {
+    HRESULT _hr = put_xrot(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSLocation::Getworld ( long Number ) {
+    float _result = 0;
+    HRESULT _hr = get_world(Number, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putworld ( long Number, float pVal ) {
+    HRESULT _hr = put_world(Number, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSLocation::Getmotor ( long Number ) {
+    long _result = 0;
+    HRESULT _hr = get_motor(Number, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSLocation::Putmotor ( long Number, long pVal ) {
+    HRESULT _hr = put_motor(Number, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSLocation::ControlVersion ( long * Major, long * Minor, long * Build ) {
+    HRESULT _hr = raw_ControlVersion(Major, Minor, Build);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ICRSLocation::GetIsWorld ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsWorld(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSLocation::GetIsMotor ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsMotor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ICRSLocation::GetValue ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Value(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICRSLocation::PutValue ( _bstr_t pVal ) {
+    HRESULT _hr = put_Value(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ICRSLocation::GetIsValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsValid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSLocation::GetIsMetric ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsMetric(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface ICRSPath wrapper method implementations
+//
+
+inline long ICRSPath::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSPath::Add ( struct ICRSLocation * Location, long trigger, long before, long after ) {
+    HRESULT _hr = raw_Add(Location, trigger, before, after);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSPath::Remove ( long index ) {
+    HRESULT _hr = raw_Remove(index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ICRSPath::Gettrigger ( long index ) {
+    long _result = 0;
+    HRESULT _hr = get_trigger(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSPath::Puttrigger ( long index, long pVal ) {
+    HRESULT _hr = put_trigger(index, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICRSLocationPtr ICRSPath::Item ( long index ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = raw_Item(index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline IUnknownPtr ICRSPath::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IHCL wrapper method implementations
+//
+
+inline HRESULT IHCL::Version ( long * Major, long * Minor, long * Build ) {
+    HRESULT _hr = raw_Version(Major, Minor, Build);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::ServerVersion ( long * Major, long * Minor, long * Build ) {
+    HRESULT _hr = raw_ServerVersion(Major, Minor, Build);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CharGetString ( BSTR * Buffer, long n ) {
+    HRESULT _hr = raw_CharGetString(Buffer, n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CharPutString ( _bstr_t Buffer ) {
+    HRESULT _hr = raw_CharPutString(Buffer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CharFlushIn ( ) {
+    HRESULT _hr = raw_CharFlushIn();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IHCL::GetCharCountIn ( ) {
+    long _result = 0;
+    HRESULT _hr = get_CharCountIn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IHCL::Register ( long Port, _bstr_t Name ) {
+    HRESULT _hr = raw_Register(Port, Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::Unregister ( long Port ) {
+    HRESULT _hr = raw_Unregister(Port);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::PacketGet ( long * Port, long * Flags, long * n, BSTR * Data, long Timeout ) {
+    HRESULT _hr = raw_PacketGet(Port, Flags, n, Data, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::WordGet ( long * Port, long * Flags, long * n, long Timeout ) {
+    HRESULT _hr = raw_WordGet(Port, Flags, n, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::PacketPut ( long Port, long Flags, long n, _bstr_t Data ) {
+    HRESULT _hr = raw_PacketPut(Port, Flags, n, Data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::WordPut ( long Port, long Flags, long n ) {
+    HRESULT _hr = raw_WordPut(Port, Flags, n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IHCL::GetPacketsIncoming ( long Port ) {
+    long _result = 0;
+    HRESULT _hr = get_PacketsIncoming(Port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IHCL::GetPacketsOutgoing ( long Port ) {
+    long _result = 0;
+    HRESULT _hr = get_PacketsOutgoing(Port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IHCL::Stats ( long * CharsIn, long * CharsOut, long * PIn, long * PInErrors, long * PInTimeouts, long * POut, long * POutErrors, long * POutTimeouts ) {
+    HRESULT _hr = raw_Stats(CharsIn, CharsOut, PIn, PInErrors, PInTimeouts, POut, POutErrors, POutTimeouts);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IHCL::GetLocalServiceName ( long Port ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LocalServiceName(Port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IHCL::CPacketPut ( unsigned short Port, unsigned char Flags, long n, char * Data, long DataLen ) {
+    HRESULT _hr = raw_CPacketPut(Port, Flags, n, Data, DataLen);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CPacketGet ( unsigned short * Port, unsigned char * Flags, long * n, char * Data, long * DataLen, long Timeout ) {
+    HRESULT _hr = raw_CPacketGet(Port, Flags, n, Data, DataLen, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CWordGet ( unsigned short * Port, unsigned char * Flags, long * n, long Timeout ) {
+    HRESULT _hr = raw_CWordGet(Port, Flags, n, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::CWordPut ( unsigned short Port, unsigned char Flags, long n ) {
+    HRESULT _hr = raw_CWordPut(Port, Flags, n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::DrainOutgoing ( long Port, long Level, long * ActualLevel, long Timeout ) {
+    HRESULT _hr = raw_DrainOutgoing(Port, Level, ActualLevel, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::SleepWithMessageLoop ( long msec ) {
+    HRESULT _hr = raw_SleepWithMessageLoop(msec);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::SendHeartbeat ( long Port, enum avoAsynchVectorOp VOp, long VBits ) {
+    HRESULT _hr = raw_SendHeartbeat(Port, VOp, VBits);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IHCL::Asynch ( long Port, enum avoAsynchVectorOp VOp, long VBits, long * PrevVBits ) {
+    HRESULT _hr = raw_Asynch(Port, VOp, VBits, PrevVBits);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IHCL::GetRobotInUse ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RobotInUse(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IHCL::PutRobotInUse ( long pVal ) {
+    HRESULT _hr = put_RobotInUse(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum blmBlockingMode IHCL::GetBlockingMode ( ) {
+    enum blmBlockingMode _result;
+    HRESULT _hr = get_BlockingMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IHCL::PutBlockingMode ( enum blmBlockingMode pVal ) {
+    HRESULT _hr = put_BlockingMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICRSRobot wrapper method implementations
+//
+
+inline ICRSLocationPtr ICRSRobot::GetMotorLocation ( enum ptPositionType PosType ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_MotorLocation(PosType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline HRESULT ICRSRobot::Move ( struct ICRSLocation * Location ) {
+    HRESULT _hr = raw_Move(Location);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ControlGet ( ) {
+    HRESULT _hr = raw_ControlGet();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ControlRelease ( ) {
+    HRESULT _hr = raw_ControlRelease();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Ready ( ) {
+    HRESULT _hr = raw_Ready();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Approach ( struct ICRSLocation * Location, float Distance ) {
+    HRESULT _hr = raw_Approach(Location, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Finish ( enum ftFinishTolerance Tolerance ) {
+    HRESULT _hr = raw_Finish(Tolerance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Depart ( float Distance ) {
+    HRESULT _hr = raw_Depart(Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::GripperOpen ( float Force ) {
+    HRESULT _hr = raw_GripperOpen(Force);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::GripperClose ( float Force ) {
+    HRESULT _hr = raw_GripperClose(Force);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::GripperFinish ( ) {
+    HRESULT _hr = raw_GripperFinish();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum utUnitsType ICRSRobot::GetUnits ( ) {
+    enum utUnitsType _result;
+    HRESULT _hr = get_Units(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutUnits ( enum utUnitsType pVal ) {
+    HRESULT _hr = put_Units(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSRobot::Limp ( enum alAxisList LimpAxisMask ) {
+    HRESULT _hr = raw_Limp(LimpAxisMask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::NoLimp ( enum alAxisList LimpAxisMask ) {
+    HRESULT _hr = raw_NoLimp(LimpAxisMask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline float ICRSRobot::GetAxisAcceleration ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisAcceleration(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisAcceleration ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisAcceleration(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetGripperDistance ( ) {
+    float _result = 0;
+    HRESULT _hr = get_GripperDistance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutGripperDistance ( float pVal ) {
+    HRESULT _hr = put_GripperDistance(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ICRSRobot::GetGripperFinished ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_GripperFinished(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetInput ( long Point ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Input(Point, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetInputs ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Inputs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetOutput ( long Point, VARIANT_BOOL QueueBypass ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Output(Point, QueueBypass, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutOutput ( long Point, VARIANT_BOOL QueueBypass, VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_Output(Point, QueueBypass, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetOutputs ( VARIANT_BOOL QueueBypass ) {
+    long _result = 0;
+    HRESULT _hr = get_Outputs(QueueBypass, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutOutputs ( VARIANT_BOOL QueueBypass, long pVal ) {
+    HRESULT _hr = put_Outputs(QueueBypass, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetSpeed ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Speed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutSpeed ( long pVal ) {
+    HRESULT _hr = put_Speed(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICRSLocationPtr ICRSRobot::GetToolTransform ( ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_ToolTransform(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline void ICRSRobot::PutRefToolTransform ( struct ICRSLocation * pVal ) {
+    HRESULT _hr = putref_ToolTransform(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetTotalAxes ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TotalAxes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutTotalAxes ( long pVal ) {
+    HRESULT _hr = put_TotalAxes(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum proProductType ICRSRobot::GetProductType ( ) {
+    enum proProductType _result;
+    HRESULT _hr = get_ProductType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum robRobotType ICRSRobot::GetRobotType ( ) {
+    enum robRobotType _result;
+    HRESULT _hr = get_RobotType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetBlendMotion ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_BlendMotion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutBlendMotion ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_BlendMotion(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutLivemanSwitchEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_LivemanSwitchEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutTrapezoidalProfileEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_TrapezoidalProfileEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetRobotInUse ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RobotInUse(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutRobotInUse ( long pVal ) {
+    HRESULT _hr = put_RobotInUse(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ICRSRobot::GetFinished ( enum ftFinishTolerance Tolerance ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Finished(Tolerance, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetHomed ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Homed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetIsPowered ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsPowered(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline ICRSLocationPtr ICRSRobot::GetWorldLocation ( enum ptPositionType PosType ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_WorldLocation(PosType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline HRESULT ICRSRobot::GripperCalibrate ( float MinDistance, float MaxDistance ) {
+    HRESULT _hr = raw_GripperCalibrate(MinDistance, MaxDistance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::GripperStop ( ) {
+    HRESULT _hr = raw_GripperStop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Calibrate ( enum alAxisList Axes ) {
+    HRESULT _hr = raw_Calibrate(Axes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Home ( enum alAxisList Axes ) {
+    HRESULT _hr = raw_Home(Axes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Zero ( ) {
+    HRESULT _hr = raw_Zero();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::WaitForButton ( enum cbControllerButtons b, long msTmeout ) {
+    HRESULT _hr = raw_WaitForButton(b, msTmeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ApproachStraight ( struct ICRSLocation * Location, float Distance ) {
+    HRESULT _hr = raw_ApproachStraight(Location, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::DepartStraight ( float Distance ) {
+    HRESULT _hr = raw_DepartStraight(Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::MoveStraight ( struct ICRSLocation * Location ) {
+    HRESULT _hr = raw_MoveStraight(Location);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::CalReady ( ) {
+    HRESULT _hr = raw_CalReady();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Joint ( long axis, float Distance ) {
+    HRESULT _hr = raw_Joint(axis, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::motor ( long axis, long Pulses, enum msmMotorStopMode Condition ) {
+    HRESULT _hr = raw_motor(axis, Pulses, Condition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline ICRSLocationPtr ICRSRobot::GetWorldToMotor ( struct ICRSLocation * WorldLoc ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_WorldToMotor(WorldLoc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline ICRSLocationPtr ICRSRobot::GetMotorToWorld ( struct ICRSLocation * MotorLoc ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_MotorToWorld(MotorLoc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline HRESULT ICRSRobot::ShiftTool ( struct ICRSLocation * Dest, float x, float y, float z, float yaw, float pitch, float roll ) {
+    HRESULT _hr = raw_ShiftTool(Dest, x, y, z, yaw, pitch, roll);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ShiftWorld ( struct ICRSLocation * Dest, float x, float y, float z, float zrot, float yrot, float xrot ) {
+    HRESULT _hr = raw_ShiftWorld(Dest, x, y, z, zrot, yrot, xrot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ClearError ( ) {
+    HRESULT _hr = raw_ClearError();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum ecErrorCode ICRSRobot::GetAsynchError ( ) {
+    enum ecErrorCode _result;
+    HRESULT _hr = get_AsynchError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSRobot::ForceCalibrate ( enum waWorldAxis WorldAxis ) {
+    HRESULT _hr = raw_ForceCalibrate(WorldAxis);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ForceDataGet ( float * Fx, float * Fy, float * Fz, float * Tx, float * Ty, float * Tz ) {
+    HRESULT _hr = raw_ForceDataGet(Fx, Fy, Fz, Tx, Ty, Tz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ForceSensorOffset ( float x, float y, float z, float yaw, float pitch, float roll, VARIANT_BOOL Decouple ) {
+    HRESULT _hr = raw_ForceSensorOffset(x, y, z, yaw, pitch, roll, Decouple);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline void ICRSRobot::PutForceFrame ( enum ffForceFrame _arg1 ) {
+    HRESULT _hr = put_ForceFrame(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetForceParam ( enum fpForceParameter param ) {
+    float _result = 0;
+    HRESULT _hr = get_ForceParam(param, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutForceParam ( enum fpForceParameter param, float pVal ) {
+    HRESULT _hr = put_ForceParam(param, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetLinearAcceleration ( ) {
+    float _result = 0;
+    HRESULT _hr = get_LinearAcceleration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutLinearAcceleration ( float pVal ) {
+    HRESULT _hr = put_LinearAcceleration(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetLinearSpeed ( ) {
+    float _result = 0;
+    HRESULT _hr = get_LinearSpeed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutLinearSpeed ( float pVal ) {
+    HRESULT _hr = put_LinearSpeed(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetRotationalAcceleration ( ) {
+    float _result = 0;
+    HRESULT _hr = get_RotationalAcceleration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutRotationalAcceleration ( float pVal ) {
+    HRESULT _hr = put_RotationalAcceleration(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetRotationalSpeed ( ) {
+    float _result = 0;
+    HRESULT _hr = get_RotationalSpeed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutRotationalSpeed ( float pVal ) {
+    HRESULT _hr = put_RotationalSpeed(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutForceEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_ForceEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutTriggerEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_TriggerEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSRobot::CTPathGo ( long PathNumber ) {
+    HRESULT _hr = raw_CTPathGo(PathNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::CTPath ( long PathNumber, struct ICRSPath * Path, long Start, long Finish, long PathSpeed ) {
+    HRESULT _hr = raw_CTPath(PathNumber, Path, Start, Finish, PathSpeed);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetPanelButton ( enum cbControllerButtons Button ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PanelButton(Button, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum cbControllerButtons ICRSRobot::GetPanelButtons ( ) {
+    enum cbControllerButtons _result;
+    HRESULT _hr = get_PanelButtons(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetPanelLight ( enum cbControllerButtons Button ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PanelLight(Button, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutPanelLight ( enum cbControllerButtons Button, VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_PanelLight(Button, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetAxisPosition ( long axis, enum ptPositionType PosType ) {
+    long _result = 0;
+    HRESULT _hr = get_AxisPosition(axis, PosType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisPosition ( long axis, enum ptPositionType PosType, long pVal ) {
+    HRESULT _hr = put_AxisPosition(axis, PosType, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSRobot::LockAxes ( enum alAxisList Axes ) {
+    HRESULT _hr = raw_LockAxes(Axes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::UnlockAxes ( enum alAxisList Axes ) {
+    HRESULT _hr = raw_UnlockAxes(Axes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ICRSRobot::GetTransformAxes ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TransformAxes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetMachineAxes ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MachineAxes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum gtGripperType ICRSRobot::GetGripperType ( ) {
+    enum gtGripperType _result;
+    HRESULT _hr = get_GripperType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutGripperType ( enum gtGripperType pVal ) {
+    HRESULT _hr = put_GripperType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutDryRunModeEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_DryRunModeEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICRSLocationPtr ICRSRobot::GetBaseOffset ( ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_BaseOffset(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline void ICRSRobot::PutRefBaseOffset ( struct ICRSLocation * pVal ) {
+    HRESULT _hr = putref_BaseOffset(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisLinkLength ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisLinkLength(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisLinkLength ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisLinkLength(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisNegativeLimit ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisNegativeLimit(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisNegativeLimit ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisNegativeLimit(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisPositiveLimit ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisPositiveLimit(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisPositiveLimit ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisPositiveLimit(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisMaximumJointVelocity ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisMaximumJointVelocity(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisMaximumJointVelocity ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisMaximumJointVelocity(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAnalogInput ( enum anaAnalogInputs channel ) {
+    float _result = 0;
+    HRESULT _hr = get_AnalogInput(channel, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetServerProtocol ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ServerProtocol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetServerVersion ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ServerVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAllowArmPower ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_AllowArmPower(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetBoardTemperature ( ) {
+    float _result = 0;
+    HRESULT _hr = get_BoardTemperature(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetOdometer ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Odometer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline ICRSLocationPtr ICRSRobot::GetJointToMotor ( float j1, float j2, float j3, float j4, float j5, float j6, float j7, float j8 ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_JointToMotor(j1, j2, j3, j4, j5, j6, j7, j8, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline ICRSLocationPtr ICRSRobot::GetJointToWorld ( float j1, float j2, float j3, float j4, float j5, float j6, float j7, float j8 ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_JointToWorld(j1, j2, j3, j4, j5, j6, j7, j8, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline HRESULT ICRSRobot::JogTool ( enum taToolAxis axis, float Distance ) {
+    HRESULT _hr = raw_JogTool(axis, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::JogToolStraight ( enum taToolAxis axis, float Distance ) {
+    HRESULT _hr = raw_JogToolStraight(axis, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::JogWorld ( enum waWorldAxis axis, float Distance ) {
+    HRESULT _hr = raw_JogWorld(axis, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::JogWorldStraight ( enum waWorldAxis axis, float Distance ) {
+    HRESULT _hr = raw_JogWorldStraight(axis, Distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ConfigLoad ( ) {
+    HRESULT _hr = raw_ConfigLoad();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ConfigSave ( ) {
+    HRESULT _hr = raw_ConfigSave();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::CommunicationCheck ( ) {
+    HRESULT _hr = raw_CommunicationCheck();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::MotorToJoint ( struct ICRSLocation * MotorLoc, float * j1, float * j2, float * j3, float * j4, float * j5, float * j6, float * j7, float * j8 ) {
+    HRESULT _hr = raw_MotorToJoint(MotorLoc, j1, j2, j3, j4, j5, j6, j7, j8);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::WorldToJoint ( struct ICRSLocation * WorldLoc, float * j1, float * j2, float * j3, float * j4, float * j5, float * j6, float * j7, float * j8 ) {
+    HRESULT _hr = raw_WorldToJoint(WorldLoc, j1, j2, j3, j4, j5, j6, j7, j8);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline float ICRSRobot::GetAxisDGain ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisDGain(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisDGain ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisDGain(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisIGain ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisIGain(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisIGain ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisIGain(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisPGain ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisPGain(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisPGain ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisPGain(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetAxisPulsesPerMotorTurn ( long axis ) {
+    long _result = 0;
+    HRESULT _hr = get_AxisPulsesPerMotorTurn(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisPulsesPerMotorTurn ( long axis, long pVal ) {
+    HRESULT _hr = put_AxisPulsesPerMotorTurn(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisTurnsPerUnit ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisTurnsPerUnit(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisTurnsPerUnit ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisTurnsPerUnit(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetMCEMem ( long Address ) {
+    long _result = 0;
+    HRESULT _hr = get_MCEMem(Address, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutMCEMem ( long Address, long pVal ) {
+    HRESULT _hr = put_MCEMem(Address, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetServoErrorParam ( long axis, long param ) {
+    long _result = 0;
+    HRESULT _hr = get_ServoErrorParam(axis, param, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutServoErrorParam ( long axis, long param, long pVal ) {
+    HRESULT _hr = put_ServoErrorParam(axis, param, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICRSRobot::PutForcePassword ( long _arg1 ) {
+    HRESULT _hr = put_ForcePassword(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetFNetworkInputs ( long mask ) {
+    long _result = 0;
+    HRESULT _hr = get_FNetworkInputs(mask, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetFNetworkInput ( long Point ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_FNetworkInput(Point, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetFNetworkOutput ( long Point ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_FNetworkOutput(Point, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutFNetworkOutput ( long Point, VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_FNetworkOutput(Point, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetFNetworkOutputs ( long mask ) {
+    long _result = 0;
+    HRESULT _hr = get_FNetworkOutputs(mask, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutFNetworkOutputs ( long mask, long pVal ) {
+    HRESULT _hr = put_FNetworkOutputs(mask, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum tfTrackFlag ICRSRobot::GetTrackEnable ( ) {
+    enum tfTrackFlag _result;
+    HRESULT _hr = get_TrackEnable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutTrackEnable ( enum tfTrackFlag pVal ) {
+    HRESULT _hr = put_TrackEnable(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICRSRobot::GetStance ( VARIANT_BOOL Physical ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Stance(Physical, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICRSRobot::PutStance ( VARIANT_BOOL Physical, _bstr_t pVal ) {
+    HRESULT _hr = put_Stance(Physical, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICRSRobot::GetVersionString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_VersionString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long ICRSRobot::GetHomingSwitchOffset ( long axis ) {
+    long _result = 0;
+    HRESULT _hr = get_HomingSwitchOffset(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRobot::GetProcessID ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ProcessID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSRobot::HomeZeroCross ( long axis, long * Offset ) {
+    HRESULT _hr = raw_HomeZeroCross(axis, Offset);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::ControlGive ( long RobotPID ) {
+    HRESULT _hr = raw_ControlGive(RobotPID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::AxisStatus ( long * a1, long * a2, long * a3, long * a4, long * a5, long * a6, long * a7, long * a8 ) {
+    HRESULT _hr = raw_AxisStatus(a1, a2, a3, a4, a5, a6, a7, a8);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::CalibrateZeroCross ( long axis, long * Offset ) {
+    HRESULT _hr = raw_CalibrateZeroCross(axis, Offset);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Align ( enum aaAlignAxes axis ) {
+    HRESULT _hr = raw_Align(axis);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::FServoStatus ( long * NetStat, long * Axis1, long * Axis2, long * Axis3, long * Axis4, long * Axis5, long * Axis6, long * Axis7, long * Axis8 ) {
+    HRESULT _hr = raw_FServoStatus(NetStat, Axis1, Axis2, Axis3, Axis4, Axis5, Axis6, Axis7, Axis8);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::FNetworkPacket ( enum fnaFNetworkAddress channel, enum fncFNetworkCommand Cmd, long In0, long In1, long In2, long In3, long * Out0, long * Out1, long * Out2, long * Out3, long * Out4, long * Out5, long * Out6, long * Out7 ) {
+    HRESULT _hr = raw_FNetworkPacket(channel, Cmd, In0, In1, In2, In3, Out0, Out1, Out2, Out3, Out4, Out5, Out6, Out7);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRobot::Abort ( ) {
+    HRESULT _hr = raw_Abort();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline void ICRSRobot::PutForceTrackingEnable ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_ForceTrackingEnable(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSRobot::ClearAbort ( ) {
+    HRESULT _hr = raw_ClearAbort();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IHCLPtr ICRSRobot::GetHCL ( ) {
+    struct IHCL * _result = 0;
+    HRESULT _hr = get_HCL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IHCLPtr(_result, false);
+}
+
+inline HRESULT ICRSRobot::HomeInPlace ( enum alAxisList Axes ) {
+    HRESULT _hr = raw_HomeInPlace(Axes);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ICRSRobot::GetIsAborted ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsAborted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline float ICRSRobot::GetLinearJerk ( ) {
+    float _result = 0;
+    HRESULT _hr = get_LinearJerk(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutLinearJerk ( float pVal ) {
+    HRESULT _hr = put_LinearJerk(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetAxisMaximumJerk ( long axis ) {
+    float _result = 0;
+    HRESULT _hr = get_AxisMaximumJerk(axis, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutAxisMaximumJerk ( long axis, float pVal ) {
+    HRESULT _hr = put_AxisMaximumJerk(axis, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetLinearBlendRadius ( ) {
+    float _result = 0;
+    HRESULT _hr = get_LinearBlendRadius(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutLinearBlendRadius ( float pVal ) {
+    HRESULT _hr = put_LinearBlendRadius(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float ICRSRobot::GetRotationalBlendRadius ( ) {
+    float _result = 0;
+    HRESULT _hr = get_RotationalBlendRadius(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutRotationalBlendRadius ( float pVal ) {
+    HRESULT _hr = put_RotationalBlendRadius(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ICRSRobot::GetPointDeletion ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PointDeletion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutPointDeletion ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_PointDeletion(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetMaxAgeInQueue ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxAgeInQueue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutMaxAgeInQueue ( long pVal ) {
+    HRESULT _hr = put_MaxAgeInQueue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ICRSRobot::GetMaxBlendRatio ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxBlendRatio(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRobot::PutMaxBlendRatio ( long pVal ) {
+    HRESULT _hr = put_MaxBlendRatio(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICRSV3File wrapper method implementations
+//
+
+inline ICRSLocationPtr ICRSV3File::GetLocation ( _bstr_t Variable, long Index1, long Index2 ) {
+    struct ICRSLocation * _result = 0;
+    HRESULT _hr = get_Location(Variable, Index1, Index2, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSLocationPtr(_result, false);
+}
+
+inline void ICRSV3File::PutRefLocation ( _bstr_t Variable, long Index1, long Index2, struct ICRSLocation * pVal ) {
+    HRESULT _hr = putref_Location(Variable, Index1, Index2, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t ICRSV3File::GetValue ( _bstr_t Variable ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Value(Variable, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void ICRSV3File::PutValue ( _bstr_t Variable, const _variant_t & pVal ) {
+    HRESULT _hr = put_Value(Variable, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSV3File::Open ( _bstr_t V3FileName, enum v3fFlags Flags ) {
+    HRESULT _hr = raw_Open(V3FileName, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::VariableInfo ( _bstr_t Name, enum v3tBaseType * BaseType, long * Dim1, long * Dim2, enum v3vFlags * Flags ) {
+    HRESULT _hr = raw_VariableInfo(Name, BaseType, Dim1, Dim2, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::Rewind ( ) {
+    HRESULT _hr = raw_Rewind();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::GetNextName ( BSTR * Name ) {
+    HRESULT _hr = raw_GetNextName(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::Create ( _bstr_t Name, enum v3tBaseType BaseType, long Dim1, long Dim2 ) {
+    HRESULT _hr = raw_Create(Name, BaseType, Dim1, Dim2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::Delete ( _bstr_t Name ) {
+    HRESULT _hr = raw_Delete(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSV3File::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline ICRSPathPtr ICRSV3File::GetPath ( _bstr_t Variable, long index ) {
+    struct ICRSPath * _result = 0;
+    HRESULT _hr = get_Path(Variable, index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICRSPathPtr(_result, false);
+}
+
+inline void ICRSV3File::PutRefPath ( _bstr_t Variable, long index, struct ICRSPath * pVal ) {
+    HRESULT _hr = putref_Path(Variable, index, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICRSRemote wrapper method implementations
+//
+
+inline HRESULT ICRSRemote::CROSVersion ( long * Major, long * Minor, long * Build ) {
+    HRESULT _hr = raw_CROSVersion(Major, Minor, Build);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::GetFile ( _bstr_t LocalDstFile, _bstr_t RemoteSrcFile, enum ftoFileTransferOptions Options ) {
+    HRESULT _hr = raw_GetFile(LocalDstFile, RemoteSrcFile, Options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::PutFile ( _bstr_t LocalSrcFile, _bstr_t RemoteDstFile, enum ftoFileTransferOptions Options ) {
+    HRESULT _hr = raw_PutFile(LocalSrcFile, RemoteDstFile, Options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ICRSRemote::GetPercentDone ( ) {
+    long _result = 0;
+    HRESULT _hr = get_PercentDone(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSRemote::AbortFileTransfer ( ) {
+    HRESULT _hr = raw_AbortFileTransfer();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::Delete ( _bstr_t RemoteFile ) {
+    HRESULT _hr = raw_Delete(RemoteFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::RmDir ( _bstr_t RemoteDirName ) {
+    HRESULT _hr = raw_RmDir(RemoteDirName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::MkDir ( _bstr_t RemoteDirName ) {
+    HRESULT _hr = raw_MkDir(RemoteDirName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::DirRead ( _bstr_t RemoteDirName ) {
+    HRESULT _hr = raw_DirRead(RemoteDirName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::DirRewind ( ) {
+    HRESULT _hr = raw_DirRewind();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::DirNext ( ) {
+    HRESULT _hr = raw_DirNext();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t ICRSRemote::GetDirFileName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DirFileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum dntDirectoryNodeType ICRSRemote::GetDirFileType ( ) {
+    enum dntDirectoryNodeType _result;
+    HRESULT _hr = get_DirFileType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum famFileAttributes ICRSRemote::GetDirFileAttributes ( ) {
+    enum famFileAttributes _result;
+    HRESULT _hr = get_DirFileAttributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRemote::GetDirFileSize ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DirFileSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRemote::GetDirFileLinks ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DirFileLinks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSRemote::SendSignal ( long CROSPid, enum csCROSSignal Signal ) {
+    HRESULT _hr = raw_SendSignal(CROSPid, Signal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ICRSRemote::GetProcessExists ( long CROSPid ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ProcessExists(CROSPid, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICRSRemote::WaitForExitCode ( long CROSPid, long * ExitPID, long * ExitCode, long Timeout ) {
+    HRESULT _hr = raw_WaitForExitCode(CROSPid, ExitPID, ExitCode, Timeout);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::Run ( _bstr_t RemoteCommandLine, enum roRunOptions Options, long * CROSPid, _bstr_t StdinFile, _bstr_t StdoutFile, _bstr_t StderrFile ) {
+    HRESULT _hr = raw_Run(RemoteCommandLine, Options, CROSPid, StdinFile, StdoutFile, StderrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ICRSRemote::GetDirFileMajor ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DirFileMajor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRemote::GetDirFileMinor ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DirFileMinor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ICRSRemote::GetDirFileIdent ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DirFileIdent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline DATE ICRSRemote::GetDirFileDate ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_DirFileDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline DATE ICRSRemote::GetControllerDate ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_ControllerDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRemote::PutControllerDate ( DATE pVal ) {
+    HRESULT _hr = put_ControllerDate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ICRSRemote::Ping ( ) {
+    HRESULT _hr = raw_Ping();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICRSRemote::FileSpace ( _bstr_t ObjName, enum fstFilesystemType * FSType, long * BlockSize, long * BlocksFree, long * BlocksTotal, long * InodesFree, long * InodesTotal ) {
+    HRESULT _hr = raw_FileSpace(ObjName, FSType, BlockSize, BlocksFree, BlocksTotal, InodesFree, InodesTotal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ICRSRemote::GetRobotInUse ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RobotInUse(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICRSRemote::PutRobotInUse ( long pVal ) {
+    HRESULT _hr = put_RobotInUse(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IHCLPtr ICRSRemote::GetHCL ( ) {
+    struct IHCL * _result = 0;
+    HRESULT _hr = get_HCL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IHCLPtr(_result, false);
+}
+
+inline HRESULT ICRSRemote::Shutdown ( ) {
+    HRESULT _hr = raw_Shutdown();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

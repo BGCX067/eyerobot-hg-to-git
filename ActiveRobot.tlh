@@ -1,0 +1,2348 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (7876403c).
+//
+// ActiveRobot.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files\CRS Robotics\ActiveRobot\ActiveRobot.dll
+// compiler-generated file created 05/02/06 at 16:01:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ACTIVEROBOTLib {
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ CRSRobot;
+struct __declspec(uuid("16f1126d-371d-4184-b601-43914cd43a08"))
+/* dual interface */ ICRSRobot;
+struct __declspec(uuid("8acbc995-672e-4cf1-8e85-ed62a0a0370d"))
+/* dual interface */ ICRSLocation;
+struct __declspec(uuid("4ae5964c-0ae4-4d54-a587-ba5b5413b7b8"))
+/* dual interface */ ICRSPath;
+struct __declspec(uuid("14282930-ce8b-11d3-9913-00a02429bba5"))
+/* dual interface */ IHCL;
+struct /* coclass */ CRSLocation;
+struct /* coclass */ CRSPath;
+struct /* coclass */ CRSV3File;
+struct __declspec(uuid("95c283b7-950c-4703-9cb8-41e66a7c960a"))
+/* dual interface */ ICRSV3File;
+struct /* coclass */ CRSRemote;
+struct __declspec(uuid("10d1c040-d8c8-11d3-9916-00a02429bba5"))
+/* dual interface */ ICRSRemote;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICRSRobot, __uuidof(ICRSRobot));
+_COM_SMARTPTR_TYPEDEF(ICRSLocation, __uuidof(ICRSLocation));
+_COM_SMARTPTR_TYPEDEF(ICRSPath, __uuidof(ICRSPath));
+_COM_SMARTPTR_TYPEDEF(IHCL, __uuidof(IHCL));
+_COM_SMARTPTR_TYPEDEF(ICRSV3File, __uuidof(ICRSV3File));
+_COM_SMARTPTR_TYPEDEF(ICRSRemote, __uuidof(ICRSRemote));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("49c42a21-c43e-4d37-96ea-b598bdc77c2f"))
+CRSRobot;
+    // [ default ] interface ICRSRobot
+
+struct __declspec(uuid("16f1126d-371d-4184-b601-43914cd43a08"))
+ICRSRobot : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMotorLocation))
+    ICRSLocationPtr MotorLocation[];
+    __declspec(property(get=GetUnits,put=PutUnits))
+    enum utUnitsType Units;
+    __declspec(property(get=GetAxisAcceleration,put=PutAxisAcceleration))
+    float AxisAcceleration[];
+    __declspec(property(get=GetGripperDistance,put=PutGripperDistance))
+    float GripperDistance;
+    __declspec(property(get=GetGripperFinished))
+    VARIANT_BOOL GripperFinished;
+    __declspec(property(get=GetInput))
+    VARIANT_BOOL Input[];
+    __declspec(property(get=GetInputs))
+    long Inputs;
+    __declspec(property(get=GetOutput,put=PutOutput))
+    VARIANT_BOOL Output[][];
+    __declspec(property(get=GetOutputs,put=PutOutputs))
+    long Outputs[];
+    __declspec(property(get=GetSpeed,put=PutSpeed))
+    long Speed;
+    __declspec(property(get=GetToolTransform,put=PutRefToolTransform))
+    ICRSLocationPtr ToolTransform;
+    __declspec(property(get=GetTotalAxes,put=PutTotalAxes))
+    long TotalAxes;
+    __declspec(property(get=GetProductType))
+    enum proProductType ProductType;
+    __declspec(property(get=GetRobotType))
+    enum robRobotType RobotType;
+    __declspec(property(get=GetBlendMotion,put=PutBlendMotion))
+    VARIANT_BOOL BlendMotion;
+    __declspec(property(put=PutLivemanSwitchEnable))
+    VARIANT_BOOL LivemanSwitchEnable;
+    __declspec(property(put=PutTrapezoidalProfileEnable))
+    VARIANT_BOOL TrapezoidalProfileEnable;
+    __declspec(property(get=GetRobotInUse,put=PutRobotInUse))
+    long RobotInUse;
+    __declspec(property(get=GetFinished))
+    VARIANT_BOOL Finished[];
+    __declspec(property(get=GetHomed))
+    VARIANT_BOOL Homed;
+    __declspec(property(get=GetIsPowered))
+    VARIANT_BOOL IsPowered;
+    __declspec(property(get=GetWorldLocation))
+    ICRSLocationPtr WorldLocation[];
+    __declspec(property(get=GetWorldToMotor))
+    ICRSLocationPtr WorldToMotor[];
+    __declspec(property(get=GetMotorToWorld))
+    ICRSLocationPtr MotorToWorld[];
+    __declspec(property(get=GetAsynchError))
+    enum ecErrorCode AsynchError;
+    __declspec(property(put=PutForceFrame))
+    enum ffForceFrame ForceFrame;
+    __declspec(property(get=GetForceParam,put=PutForceParam))
+    float ForceParam[];
+    __declspec(property(get=GetLinearAcceleration,put=PutLinearAcceleration))
+    float LinearAcceleration;
+    __declspec(property(get=GetLinearSpeed,put=PutLinearSpeed))
+    float LinearSpeed;
+    __declspec(property(get=GetRotationalAcceleration,put=PutRotationalAcceleration))
+    float RotationalAcceleration;
+    __declspec(property(get=GetRotationalSpeed,put=PutRotationalSpeed))
+    float RotationalSpeed;
+    __declspec(property(put=PutForceEnable))
+    VARIANT_BOOL ForceEnable;
+    __declspec(property(put=PutTriggerEnable))
+    VARIANT_BOOL TriggerEnable;
+    __declspec(property(get=GetPanelButton))
+    VARIANT_BOOL PanelButton[];
+    __declspec(property(get=GetPanelButtons))
+    enum cbControllerButtons PanelButtons;
+    __declspec(property(get=GetPanelLight,put=PutPanelLight))
+    VARIANT_BOOL PanelLight[];
+    __declspec(property(get=GetAxisPosition,put=PutAxisPosition))
+    long AxisPosition[][];
+    __declspec(property(get=GetTransformAxes))
+    long TransformAxes;
+    __declspec(property(get=GetMachineAxes))
+    long MachineAxes;
+    __declspec(property(get=GetGripperType,put=PutGripperType))
+    enum gtGripperType GripperType;
+    __declspec(property(put=PutDryRunModeEnable))
+    VARIANT_BOOL DryRunModeEnable;
+    __declspec(property(get=GetBaseOffset,put=PutRefBaseOffset))
+    ICRSLocationPtr BaseOffset;
+    __declspec(property(get=GetAxisLinkLength,put=PutAxisLinkLength))
+    float AxisLinkLength[];
+    __declspec(property(get=GetAxisNegativeLimit,put=PutAxisNegativeLimit))
+    float AxisNegativeLimit[];
+    __declspec(property(get=GetAxisPositiveLimit,put=PutAxisPositiveLimit))
+    float AxisPositiveLimit[];
+    __declspec(property(get=GetAxisMaximumJointVelocity,put=PutAxisMaximumJointVelocity))
+    float AxisMaximumJointVelocity[];
+    __declspec(property(get=GetAnalogInput))
+    float AnalogInput[];
+    __declspec(property(get=GetServerProtocol))
+    long ServerProtocol;
+    __declspec(property(get=GetServerVersion))
+    long ServerVersion;
+    __declspec(property(put=PutAllowArmPower))
+    VARIANT_BOOL AllowArmPower;
+    __declspec(property(get=GetBoardTemperature))
+    float BoardTemperature;
+    __declspec(property(get=GetOdometer))
+    long Odometer;
+    __declspec(property(get=GetJointToMotor))
+    ICRSLocationPtr JointToMotor[][][][][][][][];
+    __declspec(property(get=GetJointToWorld))
+    ICRSLocationPtr JointToWorld[][][][][][][][];
+    __declspec(property(get=GetAxisDGain,put=PutAxisDGain))
+    float AxisDGain[];
+    __declspec(property(get=GetAxisIGain,put=PutAxisIGain))
+    float AxisIGain[];
+    __declspec(property(get=GetAxisPGain,put=PutAxisPGain))
+    float AxisPGain[];
+    __declspec(property(get=GetAxisPulsesPerMotorTurn,put=PutAxisPulsesPerMotorTurn))
+    long AxisPulsesPerMotorTurn[];
+    __declspec(property(get=GetAxisTurnsPerUnit,put=PutAxisTurnsPerUnit))
+    float AxisTurnsPerUnit[];
+    __declspec(property(get=GetMCEMem,put=PutMCEMem))
+    long MCEMem[];
+    __declspec(property(get=GetServoErrorParam,put=PutServoErrorParam))
+    long ServoErrorParam[][];
+    __declspec(property(put=PutForcePassword))
+    long ForcePassword;
+    __declspec(property(get=GetFNetworkInputs))
+    long FNetworkInputs[];
+    __declspec(property(get=GetFNetworkInput))
+    VARIANT_BOOL FNetworkInput[];
+    __declspec(property(get=GetFNetworkOutput,put=PutFNetworkOutput))
+    VARIANT_BOOL FNetworkOutput[];
+    __declspec(property(get=GetFNetworkOutputs,put=PutFNetworkOutputs))
+    long FNetworkOutputs[];
+    __declspec(property(get=GetTrackEnable,put=PutTrackEnable))
+    enum tfTrackFlag TrackEnable;
+    __declspec(property(get=GetStance,put=PutStance))
+    _bstr_t Stance[];
+    __declspec(property(get=GetVersionString))
+    _bstr_t VersionString;
+    __declspec(property(get=GetHomingSwitchOffset))
+    long HomingSwitchOffset[];
+    __declspec(property(get=GetProcessID))
+    long ProcessID;
+    __declspec(property(put=PutForceTrackingEnable))
+    VARIANT_BOOL ForceTrackingEnable;
+    __declspec(property(get=GetHCL))
+    IHCLPtr HCL;
+    __declspec(property(get=GetIsAborted))
+    VARIANT_BOOL IsAborted;
+    __declspec(property(get=GetLinearJerk,put=PutLinearJerk))
+    float LinearJerk;
+    __declspec(property(get=GetAxisMaximumJerk,put=PutAxisMaximumJerk))
+    float AxisMaximumJerk[];
+    __declspec(property(get=GetLinearBlendRadius,put=PutLinearBlendRadius))
+    float LinearBlendRadius;
+    __declspec(property(get=GetRotationalBlendRadius,put=PutRotationalBlendRadius))
+    float RotationalBlendRadius;
+    __declspec(property(get=GetPointDeletion,put=PutPointDeletion))
+    VARIANT_BOOL PointDeletion;
+    __declspec(property(get=GetMaxAgeInQueue,put=PutMaxAgeInQueue))
+    long MaxAgeInQueue;
+    __declspec(property(get=GetMaxBlendRatio,put=PutMaxBlendRatio))
+    long MaxBlendRatio;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICRSLocationPtr GetMotorLocation (
+        enum ptPositionType PosType );
+    HRESULT Move (
+        struct ICRSLocation * Location );
+    HRESULT ControlGet ( );
+    HRESULT ControlRelease ( );
+    HRESULT Ready ( );
+    HRESULT Approach (
+        struct ICRSLocation * Location,
+        float Distance );
+    HRESULT Finish (
+        enum ftFinishTolerance Tolerance );
+    HRESULT Depart (
+        float Distance );
+    HRESULT GripperOpen (
+        float Force );
+    HRESULT GripperClose (
+        float Force );
+    HRESULT GripperFinish ( );
+    enum utUnitsType GetUnits ( );
+    void PutUnits (
+        enum utUnitsType pVal );
+    HRESULT Limp (
+        enum alAxisList LimpAxisMask );
+    HRESULT NoLimp (
+        enum alAxisList LimpAxisMask );
+    float GetAxisAcceleration (
+        long axis );
+    void PutAxisAcceleration (
+        long axis,
+        float pVal );
+    float GetGripperDistance ( );
+    void PutGripperDistance (
+        float pVal );
+    VARIANT_BOOL GetGripperFinished ( );
+    VARIANT_BOOL GetInput (
+        long Point );
+    long GetInputs ( );
+    VARIANT_BOOL GetOutput (
+        long Point,
+        VARIANT_BOOL QueueBypass );
+    void PutOutput (
+        long Point,
+        VARIANT_BOOL QueueBypass,
+        VARIANT_BOOL pVal );
+    long GetOutputs (
+        VARIANT_BOOL QueueBypass );
+    void PutOutputs (
+        VARIANT_BOOL QueueBypass,
+        long pVal );
+    long GetSpeed ( );
+    void PutSpeed (
+        long pVal );
+    ICRSLocationPtr GetToolTransform ( );
+    void PutRefToolTransform (
+        struct ICRSLocation * pVal );
+    long GetTotalAxes ( );
+    void PutTotalAxes (
+        long pVal );
+    enum proProductType GetProductType ( );
+    enum robRobotType GetRobotType ( );
+    VARIANT_BOOL GetBlendMotion ( );
+    void PutBlendMotion (
+        VARIANT_BOOL pVal );
+    void PutLivemanSwitchEnable (
+        VARIANT_BOOL _arg1 );
+    void PutTrapezoidalProfileEnable (
+        VARIANT_BOOL _arg1 );
+    long GetRobotInUse ( );
+    void PutRobotInUse (
+        long pVal );
+    VARIANT_BOOL GetFinished (
+        enum ftFinishTolerance Tolerance );
+    VARIANT_BOOL GetHomed ( );
+    VARIANT_BOOL GetIsPowered ( );
+    ICRSLocationPtr GetWorldLocation (
+        enum ptPositionType PosType );
+    HRESULT GripperCalibrate (
+        float MinDistance,
+        float MaxDistance );
+    HRESULT GripperStop ( );
+    HRESULT Calibrate (
+        enum alAxisList Axes );
+    HRESULT Home (
+        enum alAxisList Axes );
+    HRESULT Zero ( );
+    HRESULT WaitForButton (
+        enum cbControllerButtons b,
+        long msTmeout );
+    HRESULT ApproachStraight (
+        struct ICRSLocation * Location,
+        float Distance );
+    HRESULT DepartStraight (
+        float Distance );
+    HRESULT MoveStraight (
+        struct ICRSLocation * Location );
+    HRESULT CalReady ( );
+    HRESULT Joint (
+        long axis,
+        float Distance );
+    HRESULT motor (
+        long axis,
+        long Pulses,
+        enum msmMotorStopMode Condition );
+    HRESULT Stop ( );
+    ICRSLocationPtr GetWorldToMotor (
+        struct ICRSLocation * WorldLoc );
+    ICRSLocationPtr GetMotorToWorld (
+        struct ICRSLocation * MotorLoc );
+    HRESULT ShiftTool (
+        struct ICRSLocation * Dest,
+        float x,
+        float y,
+        float z,
+        float yaw,
+        float pitch,
+        float roll );
+    HRESULT ShiftWorld (
+        struct ICRSLocation * Dest,
+        float x,
+        float y,
+        float z,
+        float zrot,
+        float yrot,
+        float xrot );
+    HRESULT ClearError ( );
+    enum ecErrorCode GetAsynchError ( );
+    HRESULT ForceCalibrate (
+        enum waWorldAxis WorldAxis );
+    HRESULT ForceDataGet (
+        float * Fx,
+        float * Fy,
+        float * Fz,
+        float * Tx,
+        float * Ty,
+        float * Tz );
+    HRESULT ForceSensorOffset (
+        float x,
+        float y,
+        float z,
+        float yaw,
+        float pitch,
+        float roll,
+        VARIANT_BOOL Decouple );
+    void PutForceFrame (
+        enum ffForceFrame _arg1 );
+    float GetForceParam (
+        enum fpForceParameter param );
+    void PutForceParam (
+        enum fpForceParameter param,
+        float pVal );
+    float GetLinearAcceleration ( );
+    void PutLinearAcceleration (
+        float pVal );
+    float GetLinearSpeed ( );
+    void PutLinearSpeed (
+        float pVal );
+    float GetRotationalAcceleration ( );
+    void PutRotationalAcceleration (
+        float pVal );
+    float GetRotationalSpeed ( );
+    void PutRotationalSpeed (
+        float pVal );
+    void PutForceEnable (
+        VARIANT_BOOL _arg1 );
+    void PutTriggerEnable (
+        VARIANT_BOOL _arg1 );
+    HRESULT CTPathGo (
+        long PathNumber );
+    HRESULT CTPath (
+        long PathNumber,
+        struct ICRSPath * Path,
+        long Start,
+        long Finish,
+        long PathSpeed );
+    VARIANT_BOOL GetPanelButton (
+        enum cbControllerButtons Button );
+    enum cbControllerButtons GetPanelButtons ( );
+    VARIANT_BOOL GetPanelLight (
+        enum cbControllerButtons Button );
+    void PutPanelLight (
+        enum cbControllerButtons Button,
+        VARIANT_BOOL pVal );
+    long GetAxisPosition (
+        long axis,
+        enum ptPositionType PosType );
+    void PutAxisPosition (
+        long axis,
+        enum ptPositionType PosType,
+        long pVal );
+    HRESULT LockAxes (
+        enum alAxisList Axes );
+    HRESULT UnlockAxes (
+        enum alAxisList Axes );
+    long GetTransformAxes ( );
+    long GetMachineAxes ( );
+    enum gtGripperType GetGripperType ( );
+    void PutGripperType (
+        enum gtGripperType pVal );
+    void PutDryRunModeEnable (
+        VARIANT_BOOL _arg1 );
+    ICRSLocationPtr GetBaseOffset ( );
+    void PutRefBaseOffset (
+        struct ICRSLocation * pVal );
+    float GetAxisLinkLength (
+        long axis );
+    void PutAxisLinkLength (
+        long axis,
+        float pVal );
+    float GetAxisNegativeLimit (
+        long axis );
+    void PutAxisNegativeLimit (
+        long axis,
+        float pVal );
+    float GetAxisPositiveLimit (
+        long axis );
+    void PutAxisPositiveLimit (
+        long axis,
+        float pVal );
+    float GetAxisMaximumJointVelocity (
+        long axis );
+    void PutAxisMaximumJointVelocity (
+        long axis,
+        float pVal );
+    float GetAnalogInput (
+        enum anaAnalogInputs channel );
+    long GetServerProtocol ( );
+    long GetServerVersion ( );
+    void PutAllowArmPower (
+        VARIANT_BOOL _arg1 );
+    float GetBoardTemperature ( );
+    long GetOdometer ( );
+    ICRSLocationPtr GetJointToMotor (
+        float j1,
+        float j2,
+        float j3,
+        float j4,
+        float j5,
+        float j6,
+        float j7,
+        float j8 );
+    ICRSLocationPtr GetJointToWorld (
+        float j1,
+        float j2,
+        float j3,
+        float j4,
+        float j5,
+        float j6,
+        float j7,
+        float j8 );
+    HRESULT JogTool (
+        enum taToolAxis axis,
+        float Distance );
+    HRESULT JogToolStraight (
+        enum taToolAxis axis,
+        float Distance );
+    HRESULT JogWorld (
+        enum waWorldAxis axis,
+        float Distance );
+    HRESULT JogWorldStraight (
+        enum waWorldAxis axis,
+        float Distance );
+    HRESULT ConfigLoad ( );
+    HRESULT ConfigSave ( );
+    HRESULT CommunicationCheck ( );
+    HRESULT MotorToJoint (
+        struct ICRSLocation * MotorLoc,
+        float * j1,
+        float * j2,
+        float * j3,
+        float * j4,
+        float * j5,
+        float * j6,
+        float * j7,
+        float * j8 );
+    HRESULT WorldToJoint (
+        struct ICRSLocation * WorldLoc,
+        float * j1,
+        float * j2,
+        float * j3,
+        float * j4,
+        float * j5,
+        float * j6,
+        float * j7,
+        float * j8 );
+    float GetAxisDGain (
+        long axis );
+    void PutAxisDGain (
+        long axis,
+        float pVal );
+    float GetAxisIGain (
+        long axis );
+    void PutAxisIGain (
+        long axis,
+        float pVal );
+    float GetAxisPGain (
+        long axis );
+    void PutAxisPGain (
+        long axis,
+        float pVal );
+    long GetAxisPulsesPerMotorTurn (
+        long axis );
+    void PutAxisPulsesPerMotorTurn (
+        long axis,
+        long pVal );
+    float GetAxisTurnsPerUnit (
+        long axis );
+    void PutAxisTurnsPerUnit (
+        long axis,
+        float pVal );
+    long GetMCEMem (
+        long Address );
+    void PutMCEMem (
+        long Address,
+        long pVal );
+    long GetServoErrorParam (
+        long axis,
+        long param );
+    void PutServoErrorParam (
+        long axis,
+        long param,
+        long pVal );
+    void PutForcePassword (
+        long _arg1 );
+    long GetFNetworkInputs (
+        long mask );
+    VARIANT_BOOL GetFNetworkInput (
+        long Point );
+    VARIANT_BOOL GetFNetworkOutput (
+        long Point );
+    void PutFNetworkOutput (
+        long Point,
+        VARIANT_BOOL pVal );
+    long GetFNetworkOutputs (
+        long mask );
+    void PutFNetworkOutputs (
+        long mask,
+        long pVal );
+    enum tfTrackFlag GetTrackEnable ( );
+    void PutTrackEnable (
+        enum tfTrackFlag pVal );
+    _bstr_t GetStance (
+        VARIANT_BOOL Physical );
+    void PutStance (
+        VARIANT_BOOL Physical,
+        _bstr_t pVal );
+    _bstr_t GetVersionString ( );
+    long GetHomingSwitchOffset (
+        long axis );
+    long GetProcessID ( );
+    HRESULT HomeZeroCross (
+        long axis,
+        long * Offset );
+    HRESULT ControlGive (
+        long RobotPID );
+    HRESULT AxisStatus (
+        long * a1,
+        long * a2,
+        long * a3,
+        long * a4,
+        long * a5,
+        long * a6,
+        long * a7,
+        long * a8 );
+    HRESULT CalibrateZeroCross (
+        long axis,
+        long * Offset );
+    HRESULT Align (
+        enum aaAlignAxes axis );
+    HRESULT FServoStatus (
+        long * NetStat,
+        long * Axis1,
+        long * Axis2,
+        long * Axis3,
+        long * Axis4,
+        long * Axis5,
+        long * Axis6,
+        long * Axis7,
+        long * Axis8 );
+    HRESULT FNetworkPacket (
+        enum fnaFNetworkAddress channel,
+        enum fncFNetworkCommand Cmd,
+        long In0,
+        long In1,
+        long In2,
+        long In3,
+        long * Out0,
+        long * Out1,
+        long * Out2,
+        long * Out3,
+        long * Out4,
+        long * Out5,
+        long * Out6,
+        long * Out7 );
+    HRESULT Abort ( );
+    void PutForceTrackingEnable (
+        VARIANT_BOOL _arg1 );
+    HRESULT ClearAbort ( );
+    IHCLPtr GetHCL ( );
+    HRESULT HomeInPlace (
+        enum alAxisList Axes );
+    VARIANT_BOOL GetIsAborted ( );
+    float GetLinearJerk ( );
+    void PutLinearJerk (
+        float pVal );
+    float GetAxisMaximumJerk (
+        long axis );
+    void PutAxisMaximumJerk (
+        long axis,
+        float pVal );
+    float GetLinearBlendRadius ( );
+    void PutLinearBlendRadius (
+        float pVal );
+    float GetRotationalBlendRadius ( );
+    void PutRotationalBlendRadius (
+        float pVal );
+    VARIANT_BOOL GetPointDeletion ( );
+    void PutPointDeletion (
+        VARIANT_BOOL pVal );
+    long GetMaxAgeInQueue ( );
+    void PutMaxAgeInQueue (
+        long pVal );
+    long GetMaxBlendRatio ( );
+    void PutMaxBlendRatio (
+        long pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_MotorLocation (
+        enum ptPositionType PosType,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Move (
+        struct ICRSLocation * Location ) = 0;
+    virtual HRESULT __stdcall raw_ControlGet ( ) = 0;
+    virtual HRESULT __stdcall raw_ControlRelease ( ) = 0;
+    virtual HRESULT __stdcall raw_Ready ( ) = 0;
+    virtual HRESULT __stdcall raw_Approach (
+        struct ICRSLocation * Location,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_Finish (
+        enum ftFinishTolerance Tolerance ) = 0;
+    virtual HRESULT __stdcall raw_Depart (
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_GripperOpen (
+        float Force ) = 0;
+    virtual HRESULT __stdcall raw_GripperClose (
+        float Force ) = 0;
+    virtual HRESULT __stdcall raw_GripperFinish ( ) = 0;
+    virtual HRESULT __stdcall get_Units (
+        enum utUnitsType * pVal ) = 0;
+    virtual HRESULT __stdcall put_Units (
+        enum utUnitsType pVal ) = 0;
+    virtual HRESULT __stdcall raw_Limp (
+        enum alAxisList LimpAxisMask ) = 0;
+    virtual HRESULT __stdcall raw_NoLimp (
+        enum alAxisList LimpAxisMask ) = 0;
+    virtual HRESULT __stdcall get_AxisAcceleration (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisAcceleration (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_GripperDistance (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_GripperDistance (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_GripperFinished (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_Input (
+        long Point,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_Inputs (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Output (
+        long Point,
+        VARIANT_BOOL QueueBypass,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_Output (
+        long Point,
+        VARIANT_BOOL QueueBypass,
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_Outputs (
+        VARIANT_BOOL QueueBypass,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_Outputs (
+        VARIANT_BOOL QueueBypass,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_Speed (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_Speed (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_ToolTransform (
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall putref_ToolTransform (
+        struct ICRSLocation * pVal ) = 0;
+    virtual HRESULT __stdcall get_TotalAxes (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_TotalAxes (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_ProductType (
+        enum proProductType * pVal ) = 0;
+    virtual HRESULT __stdcall get_RobotType (
+        enum robRobotType * pVal ) = 0;
+    virtual HRESULT __stdcall get_BlendMotion (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_BlendMotion (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall put_LivemanSwitchEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall put_TrapezoidalProfileEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall get_RobotInUse (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_RobotInUse (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_Finished (
+        enum ftFinishTolerance Tolerance,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_Homed (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_IsPowered (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_WorldLocation (
+        enum ptPositionType PosType,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GripperCalibrate (
+        float MinDistance,
+        float MaxDistance ) = 0;
+    virtual HRESULT __stdcall raw_GripperStop ( ) = 0;
+    virtual HRESULT __stdcall raw_Calibrate (
+        enum alAxisList Axes ) = 0;
+    virtual HRESULT __stdcall raw_Home (
+        enum alAxisList Axes ) = 0;
+    virtual HRESULT __stdcall raw_Zero ( ) = 0;
+    virtual HRESULT __stdcall raw_WaitForButton (
+        enum cbControllerButtons b,
+        long msTmeout ) = 0;
+    virtual HRESULT __stdcall raw_ApproachStraight (
+        struct ICRSLocation * Location,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_DepartStraight (
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_MoveStraight (
+        struct ICRSLocation * Location ) = 0;
+    virtual HRESULT __stdcall raw_CalReady ( ) = 0;
+    virtual HRESULT __stdcall raw_Joint (
+        long axis,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_motor (
+        long axis,
+        long Pulses,
+        enum msmMotorStopMode Condition ) = 0;
+    virtual HRESULT __stdcall raw_Stop ( ) = 0;
+    virtual HRESULT __stdcall get_WorldToMotor (
+        struct ICRSLocation * WorldLoc,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall get_MotorToWorld (
+        struct ICRSLocation * MotorLoc,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ShiftTool (
+        struct ICRSLocation * Dest,
+        float x,
+        float y,
+        float z,
+        float yaw,
+        float pitch,
+        float roll ) = 0;
+    virtual HRESULT __stdcall raw_ShiftWorld (
+        struct ICRSLocation * Dest,
+        float x,
+        float y,
+        float z,
+        float zrot,
+        float yrot,
+        float xrot ) = 0;
+    virtual HRESULT __stdcall raw_ClearError ( ) = 0;
+    virtual HRESULT __stdcall get_AsynchError (
+        enum ecErrorCode * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ForceCalibrate (
+        enum waWorldAxis WorldAxis ) = 0;
+    virtual HRESULT __stdcall raw_ForceDataGet (
+        float * Fx,
+        float * Fy,
+        float * Fz,
+        float * Tx,
+        float * Ty,
+        float * Tz ) = 0;
+    virtual HRESULT __stdcall raw_ForceSensorOffset (
+        float x,
+        float y,
+        float z,
+        float yaw,
+        float pitch,
+        float roll,
+        VARIANT_BOOL Decouple ) = 0;
+    virtual HRESULT __stdcall put_ForceFrame (
+        enum ffForceFrame _arg1 ) = 0;
+    virtual HRESULT __stdcall get_ForceParam (
+        enum fpForceParameter param,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_ForceParam (
+        enum fpForceParameter param,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_LinearAcceleration (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_LinearAcceleration (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_LinearSpeed (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_LinearSpeed (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_RotationalAcceleration (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_RotationalAcceleration (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_RotationalSpeed (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_RotationalSpeed (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall put_ForceEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall put_TriggerEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall raw_CTPathGo (
+        long PathNumber ) = 0;
+    virtual HRESULT __stdcall raw_CTPath (
+        long PathNumber,
+        struct ICRSPath * Path,
+        long Start,
+        long Finish,
+        long PathSpeed ) = 0;
+    virtual HRESULT __stdcall get_PanelButton (
+        enum cbControllerButtons Button,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_PanelButtons (
+        enum cbControllerButtons * pVal ) = 0;
+    virtual HRESULT __stdcall get_PanelLight (
+        enum cbControllerButtons Button,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_PanelLight (
+        enum cbControllerButtons Button,
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisPosition (
+        long axis,
+        enum ptPositionType PosType,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisPosition (
+        long axis,
+        enum ptPositionType PosType,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_LockAxes (
+        enum alAxisList Axes ) = 0;
+    virtual HRESULT __stdcall raw_UnlockAxes (
+        enum alAxisList Axes ) = 0;
+    virtual HRESULT __stdcall get_TransformAxes (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_MachineAxes (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_GripperType (
+        enum gtGripperType * pVal ) = 0;
+    virtual HRESULT __stdcall put_GripperType (
+        enum gtGripperType pVal ) = 0;
+    virtual HRESULT __stdcall put_DryRunModeEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall get_BaseOffset (
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall putref_BaseOffset (
+        struct ICRSLocation * pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisLinkLength (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisLinkLength (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisNegativeLimit (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisNegativeLimit (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisPositiveLimit (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisPositiveLimit (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisMaximumJointVelocity (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisMaximumJointVelocity (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AnalogInput (
+        enum anaAnalogInputs channel,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall get_ServerProtocol (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_ServerVersion (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_AllowArmPower (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall get_BoardTemperature (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall get_Odometer (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_JointToMotor (
+        float j1,
+        float j2,
+        float j3,
+        float j4,
+        float j5,
+        float j6,
+        float j7,
+        float j8,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall get_JointToWorld (
+        float j1,
+        float j2,
+        float j3,
+        float j4,
+        float j5,
+        float j6,
+        float j7,
+        float j8,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_JogTool (
+        enum taToolAxis axis,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_JogToolStraight (
+        enum taToolAxis axis,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_JogWorld (
+        enum waWorldAxis axis,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_JogWorldStraight (
+        enum waWorldAxis axis,
+        float Distance ) = 0;
+    virtual HRESULT __stdcall raw_ConfigLoad ( ) = 0;
+    virtual HRESULT __stdcall raw_ConfigSave ( ) = 0;
+    virtual HRESULT __stdcall raw_CommunicationCheck ( ) = 0;
+    virtual HRESULT __stdcall raw_MotorToJoint (
+        struct ICRSLocation * MotorLoc,
+        float * j1,
+        float * j2,
+        float * j3,
+        float * j4,
+        float * j5,
+        float * j6,
+        float * j7,
+        float * j8 ) = 0;
+    virtual HRESULT __stdcall raw_WorldToJoint (
+        struct ICRSLocation * WorldLoc,
+        float * j1,
+        float * j2,
+        float * j3,
+        float * j4,
+        float * j5,
+        float * j6,
+        float * j7,
+        float * j8 ) = 0;
+    virtual HRESULT __stdcall get_AxisDGain (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisDGain (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisIGain (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisIGain (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisPGain (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisPGain (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisPulsesPerMotorTurn (
+        long axis,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisPulsesPerMotorTurn (
+        long axis,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisTurnsPerUnit (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisTurnsPerUnit (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_MCEMem (
+        long Address,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MCEMem (
+        long Address,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_ServoErrorParam (
+        long axis,
+        long param,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_ServoErrorParam (
+        long axis,
+        long param,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall put_ForcePassword (
+        long _arg1 ) = 0;
+    virtual HRESULT __stdcall get_FNetworkInputs (
+        long mask,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_FNetworkInput (
+        long Point,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_FNetworkOutput (
+        long Point,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_FNetworkOutput (
+        long Point,
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_FNetworkOutputs (
+        long mask,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_FNetworkOutputs (
+        long mask,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_TrackEnable (
+        enum tfTrackFlag * pVal ) = 0;
+    virtual HRESULT __stdcall put_TrackEnable (
+        enum tfTrackFlag pVal ) = 0;
+    virtual HRESULT __stdcall get_Stance (
+        VARIANT_BOOL Physical,
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Stance (
+        VARIANT_BOOL Physical,
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_VersionString (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_HomingSwitchOffset (
+        long axis,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_ProcessID (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_HomeZeroCross (
+        long axis,
+        long * Offset ) = 0;
+    virtual HRESULT __stdcall raw_ControlGive (
+        long RobotPID ) = 0;
+    virtual HRESULT __stdcall raw_AxisStatus (
+        long * a1,
+        long * a2,
+        long * a3,
+        long * a4,
+        long * a5,
+        long * a6,
+        long * a7,
+        long * a8 ) = 0;
+    virtual HRESULT __stdcall raw_CalibrateZeroCross (
+        long axis,
+        long * Offset ) = 0;
+    virtual HRESULT __stdcall raw_Align (
+        enum aaAlignAxes axis ) = 0;
+    virtual HRESULT __stdcall raw_FServoStatus (
+        long * NetStat,
+        long * Axis1,
+        long * Axis2,
+        long * Axis3,
+        long * Axis4,
+        long * Axis5,
+        long * Axis6,
+        long * Axis7,
+        long * Axis8 ) = 0;
+    virtual HRESULT __stdcall raw_FNetworkPacket (
+        enum fnaFNetworkAddress channel,
+        enum fncFNetworkCommand Cmd,
+        long In0,
+        long In1,
+        long In2,
+        long In3,
+        long * Out0,
+        long * Out1,
+        long * Out2,
+        long * Out3,
+        long * Out4,
+        long * Out5,
+        long * Out6,
+        long * Out7 ) = 0;
+    virtual HRESULT __stdcall raw_Abort ( ) = 0;
+    virtual HRESULT __stdcall put_ForceTrackingEnable (
+        VARIANT_BOOL _arg1 ) = 0;
+    virtual HRESULT __stdcall raw_ClearAbort ( ) = 0;
+    virtual HRESULT __stdcall get_HCL (
+        struct IHCL * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_HomeInPlace (
+        enum alAxisList Axes ) = 0;
+    virtual HRESULT __stdcall get_IsAborted (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_LinearJerk (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_LinearJerk (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_AxisMaximumJerk (
+        long axis,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_AxisMaximumJerk (
+        long axis,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_LinearBlendRadius (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_LinearBlendRadius (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_RotationalBlendRadius (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_RotationalBlendRadius (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_PointDeletion (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_PointDeletion (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_MaxAgeInQueue (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MaxAgeInQueue (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_MaxBlendRatio (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MaxBlendRatio (
+        long pVal ) = 0;
+};
+
+enum ptPositionType
+{
+    ptActual = 1,
+    ptCommanded = 2,
+    ptEndPoint = 3,
+    ptHold = 4,
+    ptError = 5
+};
+
+struct __declspec(uuid("8acbc995-672e-4cf1-8e85-ed62a0a0370d"))
+ICRSLocation : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetClass,put=PutClass))
+    enum locClass Class;
+    __declspec(property(get=GetFlags,put=PutFlags))
+    enum locFlags Flags;
+    __declspec(property(get=GetRobotType,put=PutRobotType))
+    enum locRobotType RobotType;
+    __declspec(property(get=Getx,put=Putx))
+    float x;
+    __declspec(property(get=Gety,put=Puty))
+    float y;
+    __declspec(property(get=Getz,put=Putz))
+    float z;
+    __declspec(property(get=Getzrot,put=Putzrot))
+    float zrot;
+    __declspec(property(get=Getyrot,put=Putyrot))
+    float yrot;
+    __declspec(property(get=Getxrot,put=Putxrot))
+    float xrot;
+    __declspec(property(get=Getworld,put=Putworld))
+    float world[];
+    __declspec(property(get=GetIsWorld))
+    VARIANT_BOOL IsWorld;
+    __declspec(property(get=GetIsMotor))
+    VARIANT_BOOL IsMotor;
+    __declspec(property(get=GetValue,put=PutValue))
+    _bstr_t Value;
+    __declspec(property(get=GetIsValid))
+    VARIANT_BOOL IsValid;
+    __declspec(property(get=GetIsMetric))
+    VARIANT_BOOL IsMetric;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum locClass GetClass ( );
+    void PutClass (
+        enum locClass pVal );
+    enum locFlags GetFlags ( );
+    void PutFlags (
+        enum locFlags pVal );
+    enum locRobotType GetRobotType ( );
+    void PutRobotType (
+        enum locRobotType pVal );
+    float Getx ( );
+    void Putx (
+        float pVal );
+    float Gety ( );
+    void Puty (
+        float pVal );
+    float Getz ( );
+    void Putz (
+        float pVal );
+    float Getzrot ( );
+    void Putzrot (
+        float pVal );
+    float Getyrot ( );
+    void Putyrot (
+        float pVal );
+    float Getxrot ( );
+    void Putxrot (
+        float pVal );
+    float Getworld (
+        long Number );
+    void Putworld (
+        long Number,
+        float pVal );
+    long Getmotor (
+        long Number );
+    void Putmotor (
+        long Number,
+        long pVal );
+    HRESULT ControlVersion (
+        long * Major,
+        long * Minor,
+        long * Build );
+    VARIANT_BOOL GetIsWorld ( );
+    VARIANT_BOOL GetIsMotor ( );
+    _bstr_t GetValue ( );
+    void PutValue (
+        _bstr_t pVal );
+    VARIANT_BOOL GetIsValid ( );
+    VARIANT_BOOL GetIsMetric ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Class (
+        enum locClass * pVal ) = 0;
+    virtual HRESULT __stdcall put_Class (
+        enum locClass pVal ) = 0;
+    virtual HRESULT __stdcall get_Flags (
+        enum locFlags * pVal ) = 0;
+    virtual HRESULT __stdcall put_Flags (
+        enum locFlags pVal ) = 0;
+    virtual HRESULT __stdcall get_RobotType (
+        enum locRobotType * pVal ) = 0;
+    virtual HRESULT __stdcall put_RobotType (
+        enum locRobotType pVal ) = 0;
+    virtual HRESULT __stdcall get_x (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_x (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_y (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_y (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_z (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_z (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_zrot (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_zrot (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_yrot (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_yrot (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_xrot (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_xrot (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_world (
+        long Number,
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_world (
+        long Number,
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_motor (
+        long Number,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_motor (
+        long Number,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_ControlVersion (
+        long * Major,
+        long * Minor,
+        long * Build ) = 0;
+    virtual HRESULT __stdcall get_IsWorld (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_IsMotor (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_Value (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Value (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_IsValid (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_IsMetric (
+        VARIANT_BOOL * pVal ) = 0;
+};
+
+enum locClass
+{
+    locUnknown = 0,
+    locCartesian = 1,
+    locPrecision = 2
+};
+
+enum locFlags
+{
+    locInvalid = 0,
+    locValid = 1,
+    locCalibrate = 2,
+    locMarker = 4,
+    locNULL = 8,
+    locMetric = 16,
+    locTool = 32,
+    locBase = 64,
+    locOffset = 128
+};
+
+enum locRobotType
+{
+    locRCA255 = 255,
+    locRCA465 = 9,
+    locRCF3 = 3
+};
+
+enum ftFinishTolerance
+{
+    ftLoose = 100,
+    ftTight = 10
+};
+
+enum utUnitsType
+{
+    utEnglish = 0,
+    utMetric = 1
+};
+
+enum alAxisList
+{
+    alAxis1 = 1,
+    alAxis2 = 2,
+    alAxis3 = 4,
+    alAxis4 = 8,
+    alAxis5 = 16,
+    alAxis6 = 32,
+    alAxis7 = 64,
+    alAxis8 = 128,
+    alAllAxes = 255
+};
+
+enum proProductType
+{
+    proM4Series = 7,
+    proFSeries = 17,
+    proM1ASeries = 255
+};
+
+enum robRobotType
+{
+    robF3 = 3,
+    robM4 = 9,
+    robM1A = 255,
+    robCAT3 = 195,
+    robCAT4 = 196,
+    robCAT5 = 197
+};
+
+enum cbControllerButtons
+{
+    cbF1 = 1,
+    cbF2 = 2,
+    cbPauseCont = 4,
+    cbHome = 8
+};
+
+enum msmMotorStopMode
+{
+    msmNone = 0,
+    msmHomingSwitchOn = 32000,
+    msmHomingSwitchOff = -32000
+};
+
+enum ecErrorCode
+{
+    ecNoError = 0,
+    ecGeneric = -1610612735,
+    ecNoSuchFile = -1610612734,
+    ecNoSuchProcess = -1610612733,
+    ecInterrupted = -1610612732,
+    ecIOError = -1610612731,
+    ecNoDevice = -1610612730,
+    ecTooBig = -1610612729,
+    ecNotExecutable = -1610612728,
+    ecBadFileDescriptor = -1610612727,
+    ecNoChildren = -1610612726,
+    ecPermissionDenied = -1610612725,
+    ecOutOfMemory = -1610612724,
+    ecAccessDenied = -1610612723,
+    ecBusy = -1610612720,
+    ecFileExists = -1610612719,
+    ecOpNotSupportedByDevice = -1610612717,
+    ecNotADirectory = -1610612716,
+    ecIsADirectory = -1610612715,
+    ecInvalidArgument = -1610612714,
+    ecTooManyFilesS = -1610612713,
+    ecTooManyFilesP = -1610612712,
+    ecIOCTLNotSupported = -1610612711,
+    ecFileBusy = -1610612710,
+    ecDeviceFull = -1610612708,
+    ecIllegalOnFifoOrSocket = -1610612707,
+    ecOutOfRange = -1610612702,
+    ecTemporarilyUnavailable = -1610612701,
+    ecTimedOut = -1610612699,
+    ecNotASocket = -1610612697,
+    ecNoServer = -1610612696,
+    ecNoClient = -1610612695,
+    ecDeviceIsBeingReset = -1610612694,
+    ecDirectoryNotEmpty = -1610612693,
+    ecOperationNotSupported = -1610612691,
+    ecIllegalSLMove = -1610547199,
+    ecIllegalOperand = -1610481656,
+    ecForceLockedOut = -1610481655,
+    ecJointLimitExceeded = -1610350591,
+    ecOutOfReach = -1610350589,
+    ecAxisIsLimp = -1610350588,
+    ecNotHomed = -1610350587,
+    ecPathError = -1610350586,
+    ecPowerOff = -1610350585,
+    ecGripTypeNotSet = -1610350584,
+    ecIllegalGripType = -1610350583,
+    ecAxisIsLocked = -1610350582,
+    ecMotionError = -1610350579,
+    ecAbortInProgress = -1610350578,
+    ecAxisOverspeed = -1610153983,
+    ecAxisRunaway = -1610153982,
+    ecCollision = -1610153980
+};
+
+enum waWorldAxis
+{
+    waX = 1,
+    waY = 2,
+    waZ = 3,
+    waZRot = 4,
+    waYRot = 5,
+    waXRot = 6
+};
+
+enum ffForceFrame
+{
+    ffSensor = 0,
+    ffWorld = 1,
+    ffTool = 2
+};
+
+enum fpForceParameter
+{
+    fpResolvedFx = 0,
+    fpResolvedFy = 1,
+    fpResolvedFz = 2,
+    fpResolvedTx = 3,
+    fpRelsolvedTy = 4,
+    fpResolvedTz = 5,
+    fpResolvedFr = 6,
+    fpResolvedTr = 7,
+    fpTrackingOffsetX = 8,
+    fpTrackingOffsetY = 9,
+    fpTrackingOffsetZ = 10,
+    fpTrackingOffsetYaw = 11,
+    fpTrackingOffsetPitch = 12,
+    fpTrackingOffsetRoll = 13,
+    fpMaxSensedFx = 16,
+    fpMaxSensedFy = 17,
+    fpMaxSensedFz = 18,
+    fpMaxSensedTx = 19,
+    fpMaxSensedTy = 20,
+    fpMaxSensedTz = 21,
+    fpMaxSensedFr = 22,
+    fpMaxSensedTr = 23,
+    fpPGainFx = 24,
+    fpPGainFy = 25,
+    fpPGainFz = 26,
+    fpPGainTx = 27,
+    fpPGainTy = 28,
+    fpPGainTz = 29,
+    fpDGainFx = 30,
+    fpDGainFy = 31,
+    fpDGainFz = 32,
+    fpDGainTx = 33,
+    fpDGainTy = 34,
+    fpDGainTz = 35,
+    fpThresholdFx = 36,
+    fpThresholdFy = 37,
+    fpThresholdFz = 38,
+    fpThresholdTx = 39,
+    fpThresholdTy = 40,
+    fpThresholdTz = 41,
+    fpSetpointFx = 42,
+    fpSetpointFy = 43,
+    fpSetpointFz = 44,
+    fpSetpointTx = 45,
+    fpSetpointTy = 46,
+    fpSetpointTz = 47,
+    fpSensorDataScalingFx = 50,
+    fpSensorDataScalingFy = 51,
+    fpSensorDataScalingFz = 52,
+    fpSensorDataScalingTx = 53,
+    fpSensorDataScalingTy = 54,
+    fpSensorDataScalingTz = 55,
+    fpLimitClampX = 56,
+    fpLimitClampY = 57,
+    fpLimitClampZ = 58,
+    fpLimitClampYaw = 59,
+    fpLimitClampPitch = 60,
+    fpLimitClampRoll = 61
+};
+
+struct __declspec(uuid("4ae5964c-0ae4-4d54-a587-ba5b5413b7b8"))
+ICRSPath : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Gettrigger,put=Puttrigger))
+    long trigger[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    HRESULT Add (
+        struct ICRSLocation * Location,
+        long trigger,
+        long before,
+        long after );
+    HRESULT Remove (
+        long index );
+    long Gettrigger (
+        long index );
+    void Puttrigger (
+        long index,
+        long pVal );
+    ICRSLocationPtr Item (
+        long index );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Count (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        struct ICRSLocation * Location,
+        long trigger,
+        long before,
+        long after ) = 0;
+    virtual HRESULT __stdcall raw_Remove (
+        long index ) = 0;
+    virtual HRESULT __stdcall get_trigger (
+        long index,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_trigger (
+        long index,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_Item (
+        long index,
+        struct ICRSLocation * * loc ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * pVal ) = 0;
+};
+
+enum gtGripperType
+{
+    gtNone = 0,
+    gtAir = 1,
+    gtServo = 2
+};
+
+enum anaAnalogInputs
+{
+    anaUser1 = 0,
+    anaUser2 = 1,
+    anaServoGripperFeedback = 2,
+    anaBatteryVolts = 3,
+    ana24VoltSupply = 4,
+    ana12VoltSupply = 5,
+    ana5VoltSupply = 6,
+    anaBoardTemp = 7
+};
+
+enum taToolAxis
+{
+    taX = 1,
+    taY = 2,
+    taZ = 3,
+    taYaw = 4,
+    taPitch = 5,
+    taRoll = 6
+};
+
+enum tfTrackFlag
+{
+    tfNoTrack = 0,
+    tfHaveTrack = 129
+};
+
+enum aaAlignAxes
+{
+    aaNear = 0,
+    aaX = 1,
+    aaY = 2,
+    aaZ = 3
+};
+
+enum fnaFNetworkAddress
+{
+    fnaWrist = 8,
+    fnaWaist = 16,
+    fnaTrack = 80,
+    fnaIO0 = 32,
+    fnaIO1 = 24,
+    fnaIO2 = 96,
+    fnaIO3 = 88,
+    fnaIO4 = 97,
+    fnaIO5 = 98,
+    fnaIO6 = 99,
+    fnaIO7 = 100
+};
+
+enum fncFNetworkCommand
+{
+    fncSetOut = 8,
+    fncGetIO = 9,
+    fncServoErrSet = 137,
+    fncServoErrGet = 138,
+    fncDSPCommand = 145
+};
+
+struct __declspec(uuid("14282930-ce8b-11d3-9913-00a02429bba5"))
+IHCL : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCharCountIn))
+    long CharCountIn;
+    __declspec(property(get=GetPacketsIncoming))
+    long PacketsIncoming[];
+    __declspec(property(get=GetPacketsOutgoing))
+    long PacketsOutgoing[];
+    __declspec(property(get=GetLocalServiceName))
+    _bstr_t LocalServiceName[];
+    __declspec(property(get=GetRobotInUse,put=PutRobotInUse))
+    long RobotInUse;
+    __declspec(property(get=GetBlockingMode,put=PutBlockingMode))
+    enum blmBlockingMode BlockingMode;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Version (
+        long * Major,
+        long * Minor,
+        long * Build );
+    HRESULT ServerVersion (
+        long * Major,
+        long * Minor,
+        long * Build );
+    HRESULT CharGetString (
+        BSTR * Buffer,
+        long n );
+    HRESULT CharPutString (
+        _bstr_t Buffer );
+    HRESULT CharFlushIn ( );
+    long GetCharCountIn ( );
+    HRESULT Register (
+        long Port,
+        _bstr_t Name );
+    HRESULT Unregister (
+        long Port );
+    HRESULT PacketGet (
+        long * Port,
+        long * Flags,
+        long * n,
+        BSTR * Data,
+        long Timeout );
+    HRESULT WordGet (
+        long * Port,
+        long * Flags,
+        long * n,
+        long Timeout );
+    HRESULT PacketPut (
+        long Port,
+        long Flags,
+        long n,
+        _bstr_t Data );
+    HRESULT WordPut (
+        long Port,
+        long Flags,
+        long n );
+    long GetPacketsIncoming (
+        long Port );
+    long GetPacketsOutgoing (
+        long Port );
+    HRESULT Stats (
+        long * CharsIn,
+        long * CharsOut,
+        long * PIn,
+        long * PInErrors,
+        long * PInTimeouts,
+        long * POut,
+        long * POutErrors,
+        long * POutTimeouts );
+    _bstr_t GetLocalServiceName (
+        long Port );
+    HRESULT CPacketPut (
+        unsigned short Port,
+        unsigned char Flags,
+        long n,
+        char * Data,
+        long DataLen );
+    HRESULT CPacketGet (
+        unsigned short * Port,
+        unsigned char * Flags,
+        long * n,
+        char * Data,
+        long * DataLen,
+        long Timeout );
+    HRESULT CWordGet (
+        unsigned short * Port,
+        unsigned char * Flags,
+        long * n,
+        long Timeout );
+    HRESULT CWordPut (
+        unsigned short Port,
+        unsigned char Flags,
+        long n );
+    HRESULT DrainOutgoing (
+        long Port,
+        long Level,
+        long * ActualLevel,
+        long Timeout );
+    HRESULT SleepWithMessageLoop (
+        long msec );
+    HRESULT SendHeartbeat (
+        long Port,
+        enum avoAsynchVectorOp VOp,
+        long VBits );
+    HRESULT Asynch (
+        long Port,
+        enum avoAsynchVectorOp VOp,
+        long VBits,
+        long * PrevVBits );
+    long GetRobotInUse ( );
+    void PutRobotInUse (
+        long pVal );
+    enum blmBlockingMode GetBlockingMode ( );
+    void PutBlockingMode (
+        enum blmBlockingMode pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Version (
+        long * Major,
+        long * Minor,
+        long * Build ) = 0;
+    virtual HRESULT __stdcall raw_ServerVersion (
+        long * Major,
+        long * Minor,
+        long * Build ) = 0;
+    virtual HRESULT __stdcall raw_CharGetString (
+        BSTR * Buffer,
+        long n ) = 0;
+    virtual HRESULT __stdcall raw_CharPutString (
+        BSTR Buffer ) = 0;
+    virtual HRESULT __stdcall raw_CharFlushIn ( ) = 0;
+    virtual HRESULT __stdcall get_CharCountIn (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Register (
+        long Port,
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall raw_Unregister (
+        long Port ) = 0;
+    virtual HRESULT __stdcall raw_PacketGet (
+        long * Port,
+        long * Flags,
+        long * n,
+        BSTR * Data,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_WordGet (
+        long * Port,
+        long * Flags,
+        long * n,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_PacketPut (
+        long Port,
+        long Flags,
+        long n,
+        BSTR Data ) = 0;
+    virtual HRESULT __stdcall raw_WordPut (
+        long Port,
+        long Flags,
+        long n ) = 0;
+    virtual HRESULT __stdcall get_PacketsIncoming (
+        long Port,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_PacketsOutgoing (
+        long Port,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Stats (
+        long * CharsIn,
+        long * CharsOut,
+        long * PIn,
+        long * PInErrors,
+        long * PInTimeouts,
+        long * POut,
+        long * POutErrors,
+        long * POutTimeouts ) = 0;
+    virtual HRESULT __stdcall get_LocalServiceName (
+        long Port,
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall raw_CPacketPut (
+        unsigned short Port,
+        unsigned char Flags,
+        long n,
+        char * Data,
+        long DataLen ) = 0;
+    virtual HRESULT __stdcall raw_CPacketGet (
+        unsigned short * Port,
+        unsigned char * Flags,
+        long * n,
+        char * Data,
+        long * DataLen,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_CWordGet (
+        unsigned short * Port,
+        unsigned char * Flags,
+        long * n,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_CWordPut (
+        unsigned short Port,
+        unsigned char Flags,
+        long n ) = 0;
+    virtual HRESULT __stdcall raw_DrainOutgoing (
+        long Port,
+        long Level,
+        long * ActualLevel,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_SleepWithMessageLoop (
+        long msec ) = 0;
+    virtual HRESULT __stdcall raw_SendHeartbeat (
+        long Port,
+        enum avoAsynchVectorOp VOp,
+        long VBits ) = 0;
+    virtual HRESULT __stdcall raw_Asynch (
+        long Port,
+        enum avoAsynchVectorOp VOp,
+        long VBits,
+        long * PrevVBits ) = 0;
+    virtual HRESULT __stdcall get_RobotInUse (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_RobotInUse (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_BlockingMode (
+        enum blmBlockingMode * pVal ) = 0;
+    virtual HRESULT __stdcall put_BlockingMode (
+        enum blmBlockingMode pVal ) = 0;
+};
+
+enum avoAsynchVectorOp
+{
+    avoNoOp = 0,
+    avoSet = 1,
+    avoReset = 2,
+    avoXor = 3
+};
+
+enum blmBlockingMode
+{
+    blmEventLoop = 0,
+    blmHardBlock = 1
+};
+
+struct __declspec(uuid("d01f4754-8b6c-48a5-a201-3ff4bbb7d800"))
+CRSLocation;
+    // [ default ] interface ICRSLocation
+
+struct __declspec(uuid("15931f67-49f2-47ae-898a-4bbd8739f2fa"))
+CRSPath;
+    // [ default ] interface ICRSPath
+
+struct __declspec(uuid("7a7f7e0e-8799-4f76-b180-fa84d4605543"))
+CRSV3File;
+    // [ default ] interface ICRSV3File
+
+struct __declspec(uuid("95c283b7-950c-4703-9cb8-41e66a7c960a"))
+ICRSV3File : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLocation,put=PutRefLocation))
+    ICRSLocationPtr Location[][][];
+    __declspec(property(get=GetValue,put=PutValue))
+    _variant_t Value[];
+    __declspec(property(get=GetPath,put=PutRefPath))
+    ICRSPathPtr Path[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICRSLocationPtr GetLocation (
+        _bstr_t Variable,
+        long Index1,
+        long Index2 );
+    void PutRefLocation (
+        _bstr_t Variable,
+        long Index1,
+        long Index2,
+        struct ICRSLocation * pVal );
+    _variant_t GetValue (
+        _bstr_t Variable );
+    void PutValue (
+        _bstr_t Variable,
+        const _variant_t & pVal );
+    HRESULT Open (
+        _bstr_t V3FileName,
+        enum v3fFlags Flags );
+    HRESULT VariableInfo (
+        _bstr_t Name,
+        enum v3tBaseType * BaseType,
+        long * Dim1,
+        long * Dim2,
+        enum v3vFlags * Flags );
+    HRESULT Rewind ( );
+    HRESULT GetNextName (
+        BSTR * Name );
+    HRESULT Create (
+        _bstr_t Name,
+        enum v3tBaseType BaseType,
+        long Dim1,
+        long Dim2 );
+    HRESULT Delete (
+        _bstr_t Name );
+    HRESULT Close ( );
+    ICRSPathPtr GetPath (
+        _bstr_t Variable,
+        long index );
+    void PutRefPath (
+        _bstr_t Variable,
+        long index,
+        struct ICRSPath * pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Location (
+        BSTR Variable,
+        long Index1,
+        long Index2,
+        struct ICRSLocation * * pVal ) = 0;
+    virtual HRESULT __stdcall putref_Location (
+        BSTR Variable,
+        long Index1,
+        long Index2,
+        struct ICRSLocation * pVal ) = 0;
+    virtual HRESULT __stdcall get_Value (
+        BSTR Variable,
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall put_Value (
+        BSTR Variable,
+        VARIANT pVal ) = 0;
+    virtual HRESULT __stdcall raw_Open (
+        BSTR V3FileName,
+        enum v3fFlags Flags ) = 0;
+    virtual HRESULT __stdcall raw_VariableInfo (
+        BSTR Name,
+        enum v3tBaseType * BaseType,
+        long * Dim1,
+        long * Dim2,
+        enum v3vFlags * Flags ) = 0;
+    virtual HRESULT __stdcall raw_Rewind ( ) = 0;
+    virtual HRESULT __stdcall raw_GetNextName (
+        BSTR * Name ) = 0;
+    virtual HRESULT __stdcall raw_Create (
+        BSTR Name,
+        enum v3tBaseType BaseType,
+        long Dim1,
+        long Dim2 ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall raw_Close ( ) = 0;
+    virtual HRESULT __stdcall get_Path (
+        BSTR Variable,
+        long index,
+        struct ICRSPath * * pVal ) = 0;
+    virtual HRESULT __stdcall putref_Path (
+        BSTR Variable,
+        long index,
+        struct ICRSPath * pVal ) = 0;
+};
+
+enum v3fFlags
+{
+    v3fOpen = 0,
+    v3fCreate = 1,
+    v3fTruncate = 2,
+    v3fReadOnly = 4
+};
+
+enum v3tBaseType
+{
+    v3tLong = 1,
+    v3tFloat = 2,
+    v3tString = 3,
+    v3tMotorLocation = 4,
+    v3tWorldLocation = 5
+};
+
+enum v3vFlags
+{
+    v3vTaught = 1
+};
+
+struct __declspec(uuid("10d1c041-d8c8-11d3-9916-00a02429bba5"))
+CRSRemote;
+    // [ default ] interface ICRSRemote
+
+struct __declspec(uuid("10d1c040-d8c8-11d3-9916-00a02429bba5"))
+ICRSRemote : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetPercentDone))
+    long PercentDone;
+    __declspec(property(get=GetDirFileName))
+    _bstr_t DirFileName;
+    __declspec(property(get=GetDirFileType))
+    enum dntDirectoryNodeType DirFileType;
+    __declspec(property(get=GetDirFileAttributes))
+    enum famFileAttributes DirFileAttributes;
+    __declspec(property(get=GetDirFileSize))
+    long DirFileSize;
+    __declspec(property(get=GetDirFileLinks))
+    long DirFileLinks;
+    __declspec(property(get=GetProcessExists))
+    VARIANT_BOOL ProcessExists[];
+    __declspec(property(get=GetDirFileMajor))
+    long DirFileMajor;
+    __declspec(property(get=GetDirFileMinor))
+    long DirFileMinor;
+    __declspec(property(get=GetDirFileIdent))
+    long DirFileIdent;
+    __declspec(property(get=GetDirFileDate))
+    DATE DirFileDate;
+    __declspec(property(get=GetControllerDate,put=PutControllerDate))
+    DATE ControllerDate;
+    __declspec(property(get=GetRobotInUse,put=PutRobotInUse))
+    long RobotInUse;
+    __declspec(property(get=GetHCL))
+    IHCLPtr HCL;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT CROSVersion (
+        long * Major,
+        long * Minor,
+        long * Build );
+    HRESULT GetFile (
+        _bstr_t LocalDstFile,
+        _bstr_t RemoteSrcFile,
+        enum ftoFileTransferOptions Options );
+    HRESULT PutFile (
+        _bstr_t LocalSrcFile,
+        _bstr_t RemoteDstFile,
+        enum ftoFileTransferOptions Options );
+    long GetPercentDone ( );
+    HRESULT AbortFileTransfer ( );
+    HRESULT Delete (
+        _bstr_t RemoteFile );
+    HRESULT RmDir (
+        _bstr_t RemoteDirName );
+    HRESULT MkDir (
+        _bstr_t RemoteDirName );
+    HRESULT DirRead (
+        _bstr_t RemoteDirName );
+    HRESULT DirRewind ( );
+    HRESULT DirNext ( );
+    _bstr_t GetDirFileName ( );
+    enum dntDirectoryNodeType GetDirFileType ( );
+    enum famFileAttributes GetDirFileAttributes ( );
+    long GetDirFileSize ( );
+    long GetDirFileLinks ( );
+    HRESULT SendSignal (
+        long CROSPid,
+        enum csCROSSignal Signal );
+    VARIANT_BOOL GetProcessExists (
+        long CROSPid );
+    HRESULT WaitForExitCode (
+        long CROSPid,
+        long * ExitPID,
+        long * ExitCode,
+        long Timeout );
+    HRESULT Run (
+        _bstr_t RemoteCommandLine,
+        enum roRunOptions Options,
+        long * CROSPid,
+        _bstr_t StdinFile,
+        _bstr_t StdoutFile,
+        _bstr_t StderrFile );
+    long GetDirFileMajor ( );
+    long GetDirFileMinor ( );
+    long GetDirFileIdent ( );
+    DATE GetDirFileDate ( );
+    DATE GetControllerDate ( );
+    void PutControllerDate (
+        DATE pVal );
+    HRESULT Ping ( );
+    HRESULT FileSpace (
+        _bstr_t ObjName,
+        enum fstFilesystemType * FSType,
+        long * BlockSize,
+        long * BlocksFree,
+        long * BlocksTotal,
+        long * InodesFree,
+        long * InodesTotal );
+    long GetRobotInUse ( );
+    void PutRobotInUse (
+        long pVal );
+    IHCLPtr GetHCL ( );
+    HRESULT Shutdown ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_CROSVersion (
+        long * Major,
+        long * Minor,
+        long * Build ) = 0;
+    virtual HRESULT __stdcall raw_GetFile (
+        BSTR LocalDstFile,
+        BSTR RemoteSrcFile,
+        enum ftoFileTransferOptions Options ) = 0;
+    virtual HRESULT __stdcall raw_PutFile (
+        BSTR LocalSrcFile,
+        BSTR RemoteDstFile,
+        enum ftoFileTransferOptions Options ) = 0;
+    virtual HRESULT __stdcall get_PercentDone (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_AbortFileTransfer ( ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        BSTR RemoteFile ) = 0;
+    virtual HRESULT __stdcall raw_RmDir (
+        BSTR RemoteDirName ) = 0;
+    virtual HRESULT __stdcall raw_MkDir (
+        BSTR RemoteDirName ) = 0;
+    virtual HRESULT __stdcall raw_DirRead (
+        BSTR RemoteDirName ) = 0;
+    virtual HRESULT __stdcall raw_DirRewind ( ) = 0;
+    virtual HRESULT __stdcall raw_DirNext ( ) = 0;
+    virtual HRESULT __stdcall get_DirFileName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileType (
+        enum dntDirectoryNodeType * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileAttributes (
+        enum famFileAttributes * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileSize (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileLinks (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_SendSignal (
+        long CROSPid,
+        enum csCROSSignal Signal ) = 0;
+    virtual HRESULT __stdcall get_ProcessExists (
+        long CROSPid,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_WaitForExitCode (
+        long CROSPid,
+        long * ExitPID,
+        long * ExitCode,
+        long Timeout ) = 0;
+    virtual HRESULT __stdcall raw_Run (
+        BSTR RemoteCommandLine,
+        enum roRunOptions Options,
+        long * CROSPid,
+        BSTR StdinFile,
+        BSTR StdoutFile,
+        BSTR StderrFile ) = 0;
+    virtual HRESULT __stdcall get_DirFileMajor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileMinor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileIdent (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_DirFileDate (
+        DATE * pVal ) = 0;
+    virtual HRESULT __stdcall get_ControllerDate (
+        DATE * pVal ) = 0;
+    virtual HRESULT __stdcall put_ControllerDate (
+        DATE pVal ) = 0;
+    virtual HRESULT __stdcall raw_Ping ( ) = 0;
+    virtual HRESULT __stdcall raw_FileSpace (
+        BSTR ObjName,
+        enum fstFilesystemType * FSType,
+        long * BlockSize,
+        long * BlocksFree,
+        long * BlocksTotal,
+        long * InodesFree,
+        long * InodesTotal ) = 0;
+    virtual HRESULT __stdcall get_RobotInUse (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_RobotInUse (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_HCL (
+        struct IHCL * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Shutdown ( ) = 0;
+};
+
+enum ftoFileTransferOptions
+{
+    ftoNoOverwrite = 0,
+    ftoOverwrite = 1
+};
+
+enum dntDirectoryNodeType
+{
+    dntFile = 1,
+    dntDirectory = 2,
+    dntDevice = 3,
+    dntLink = 4,
+    dntSocket = 5,
+    dntFifo = 6
+};
+
+enum famFileAttributes
+{
+    faPFlash = 2048,
+    faSFlash = 1024,
+    faSys = 512,
+    faRead = 4,
+    faWrite = 2,
+    faExecute = 1
+};
+
+enum csCROSSignal
+{
+    csSIGKILL = 1,
+    csSIGSEGV = 2,
+    csSIGILL = 3,
+    csSIGFPE = 4,
+    csSIGSYS = 5,
+    csSIGABRT = 6,
+    csSIGINT = 7,
+    csSIGALRM = 8,
+    csSIGHUP = 9,
+    csSIGPIPE = 10,
+    csSIGSOCK = 11,
+    csSIGRPWR = 12,
+    csSIG13 = 13,
+    csSIG14 = 14,
+    csSIG15 = 15,
+    csSIG16 = 16,
+    csSIGCHLD = 17,
+    csSIG18 = 18,
+    csSIG19 = 19,
+    csSIG20 = 20,
+    csSIG21 = 21,
+    csSIG22 = 22,
+    csSIG23 = 23,
+    csSIG24 = 24,
+    csSIGSTOP = 25,
+    csSIGCONT = 26
+};
+
+enum roRunOptions
+{
+    roStdoutTruncate = 0,
+    roStdoutAppend = 2,
+    roStderrTruncate = 0,
+    roStderrAppend = 1
+};
+
+enum fstFilesystemType
+{
+    fstMFS = 5064275,
+    fstCFS = 4408915,
+    fstRFS = 5391955,
+    fstHostFS = 1213158228
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "ActiveRobot.tli"
+
+} // namespace ACTIVEROBOTLib
+
+#pragma pack(pop)

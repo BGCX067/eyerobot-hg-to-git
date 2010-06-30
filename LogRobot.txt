@@ -1,0 +1,111 @@
+Location 1: x:304.77, y:0.00, z:433.02, xrot:0.00, yrot:0.00
+Location 2: x:304.77, y:125.00, z:308.02, xrot:0.00, yrot:0.00
+Location 3: x:454.76, y:0.00, z:308.02, xrot:0.00, yrot:0.00
+Location 4: x:304.76, y:0.00, z:308.02, xrot:0.00, yrot:0.00
+Location 5: x:304.76, y:0.00, z:183.02, xrot:0.00, yrot:-0.00
+Location 6: x:454.76, y:0.00, z:58.02, xrot:0.00, yrot:0.00
+Location 7: x:454.75, y:-250.00, z:308.02, xrot:0.00, yrot:0.00
+Location 8: x:454.77, y:0.00, z:558.03, xrot:0.00, yrot:0.00
+Location 9: x:454.75, y:250.00, z:308.02, xrot:0.00, yrot:0.00
+Location 10: x:304.77, y:-125.00, z:308.02, xrot:0.00, yrot:0.00
+Location 11: x:285.00, y:0.00, z:308.00, xrot:0.00, yrot:0.00
+Trial 1: location 3
+Trial 2: location 2
+Trial 3: location 10
+Trial 4: location 9
+Trial 5: location 7
+Trial 6: location 8
+Trial 7: location 9
+Trial 8: location 3
+Trial 9: location 7
+Trial 10: location 1
+Trial 11: location 9
+Trial 12: location 3
+Trial 13: location 3
+Trial 14: location 1
+Trial 15: location 2
+Trial 16: location 2
+Trial 17: location 2
+Trial 18: location 2
+Trial 19: location 5
+Trial 20: location 8
+Trial 21: location 9
+Trial 22: location 8
+Trial 23: location 5
+Trial 24: location 7
+Trial 25: location 6
+Trial 26: location 8
+Trial 27: location 7
+Trial 28: location 7
+Trial 29: location 6
+Trial 30: location 10
+Trial 31: location 8
+Trial 32: location 2
+Trial 33: location 5
+Trial 34: location 6
+Trial 35: location 7
+Trial 36: location 10
+Trial 37: location 6
+Trial 38: location 4
+Trial 39: location 8
+Trial 40: location 7
+Trial 41: location 2
+Trial 42: location 9
+Trial 43: location 5
+Trial 44: location 4
+Trial 45: location 5
+Trial 46: location 6
+Trial 47: location 8
+Trial 48: location 10
+Trial 49: location 1
+Trial 50: location 10
+Trial 51: location 6
+Trial 52: location 4
+Trial 53: location 2
+Trial 54: location 9
+Trial 55: location 9
+Trial 56: location 6
+Trial 57: location 1
+Trial 58: location 5
+Trial 59: location 7
+Trial 60: location 5
+Trial 61: location 4
+Trial 62: location 9
+Trial 63: location 7
+Trial 64: location 1
+Trial 65: location 5
+Trial 66: location 6
+Trial 67: location 8
+Trial 68: location 3
+Trial 69: location 8
+Trial 70: location 4
+Trial 71: location 1
+Trial 72: location 10
+Trial 73: location 2
+Trial 74: location 10
+Trial 75: location 4
+Trial 76: location 3
+Trial 77: location 2
+Trial 78: location 3
+Trial 79: location 9
+Trial 80: location 3
+Trial 81: location 1
+Trial 82: location 3
+Trial 83: location 3
+Trial 84: location 4
+Trial 85: location 8
+Trial 86: location 10
+Trial 87: location 6
+Trial 88: location 4
+Trial 89: location 5
+Trial 90: location 10
+Trial 91: location 6
+Trial 92: location 7
+Trial 93: location 4
+Trial 94: location 1
+Trial 95: location 9
+Trial 96: location 1
+Trial 97: location 1
+Trial 98: location 4
+Trial 99: location 10
+Trial 100: location 5

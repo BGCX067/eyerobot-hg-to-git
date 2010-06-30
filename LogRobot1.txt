@@ -1,0 +1,55 @@
+Location 1: x:409.97, y:-262.69, z:414.75, xrot:129.42, yrot:63.46
+Location 2: x:442.79, y:-36.79, z:477.49, xrot:-12.42, yrot:-89.23
+Location 3: x:440.62, y:280.49, z:183.21, xrot:-91.47, yrot:-33.67
+Location 4: x:454.46, y:25.77, z:369.57, xrot:149.84, yrot:-44.78
+Location 5: x:494.36, y:-190.21, z:324.87, xrot:130.52, yrot:-63.88
+Location 6: x:483.21, y:-123.98, z:206.79, xrot:-107.27, yrot:89.72
+Location 7: x:180.00, y:400.00, z:370.00, xrot:0.00, yrot:45.00
+Trial 1: location 1
+Trial 2: location 2
+Trial 3: location 3
+Trial 4: location 4
+Trial 5: location 5
+Trial 6: location 6
+Trial 7: location 1
+Trial 8: location 2
+Trial 9: location 3
+Trial 10: location 4
+Trial 11: location 5
+Trial 12: location 6
+Trial 13: location 1
+Trial 14: location 2
+Trial 15: location 3
+Trial 16: location 4
+Trial 17: location 5
+Trial 18: location 6
+Trial 19: location 1
+Trial 20: location 2
+Trial 21: location 3
+Trial 22: location 4
+Trial 23: location 5
+Trial 24: location 6
+Trial 25: location 1
+Trial 26: location 2
+Trial 27: location 3
+Trial 28: location 4
+Trial 29: location 5
+Trial 30: location 6
+Trial 31: location 1
+Trial 32: location 2
+Trial 33: location 3
+Trial 34: location 4
+Trial 35: location 5
+Trial 36: location 6
+Trial 37: location 1
+Trial 38: location 2
+Trial 39: location 3
+Trial 40: location 4
+Trial 41: location 5
+Trial 42: location 6
+Trial 43: location 1
+Trial 44: location 2
+Trial 45: location 3
+Trial 46: location 4
+Trial 47: location 5
+Trial 48: location 6
