@@ -71,7 +71,9 @@ int oldTime = -1;
 int sensors = 0;	    //number of sensors used
 int counter = 1;		//trial counter;
 int framec = 0;			//frame counter
-int trialNum[4] = {20, 20, 40, 60}; //fabian note; total no of trials, can change to alter the number of trials
+int trialNum[4] = {90, 90, 90, 90}; //fabian note; total no of trials, can change to alter the number of trials
+int withinTrialTargetNum; //fabian note; total no of trials, can change to alter the number of trials
+int targetSeq[MAXEVENTS][MAXEVENTS];
 int condNum[4] = {1, 1, 2, 3};//the LED sequence. DO NOT CHANGE
 
 //bool flag = false;		//flag for recording state (i.e. recording if !flag)
@@ -161,6 +163,7 @@ BOOL CRobot_ReachingDlg::OnInitDialog()
 	Robot = NULL;	
 
 	current_trial_counter = 0;	//reset trial counter
+	currentTarget = 0;
 	
 	/*init repetition tracker*/
 	for ( int i=0;i<LOCATIONNUM-1;i++){
@@ -373,36 +376,107 @@ int CRobot_ReachingDlg::Initialize_locations()
 	locations[1].rotatex = temploc->Getxrot();
 	locations[1].rotatey = temploc->Getyrot();
 
-	//temploc = Robot->GetLocation("reach_eye.v3", "n_3");
-	//locations[2].x = temploc->Getx();
-	//locations[2].y = temploc->Gety();
-	//locations[2].z = temploc->Getz();
-	//locations[2].rotatex = temploc->Getxrot();
-	//locations[2].rotatey = temploc->Getyrot();
+	temploc = Robot->GetLocation("reach_eye.v3", "n_3");
+	locations[2].x = temploc->Getx();
+	locations[2].y = temploc->Gety();
+	locations[2].z = temploc->Getz();
+	locations[2].rotatex = temploc->Getxrot();
+	locations[2].rotatey = temploc->Getyrot();
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_4");
+	locations[3].x = temploc->Getx();
+	locations[3].y = temploc->Gety();
+	locations[3].z = temploc->Getz();
+	locations[3].rotatex = temploc->Getxrot();
+	locations[3].rotatey = temploc->Getyrot();
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_5");
+	locations[4].x = temploc->Getx();
+	locations[4].y = temploc->Gety();
+	locations[4].z = temploc->Getz();
+	locations[4].rotatex = temploc->Getxrot();
+	locations[4].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_6");
+	locations[5].x = temploc->Getx();
+	locations[5].y = temploc->Gety();
+	locations[5].z = temploc->Getz();
+	locations[5].rotatex = temploc->Getxrot();
+	locations[5].rotatey = temploc->Getyrot();
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_7");
+	locations[6].x = temploc->Getx();
+	locations[6].y = temploc->Gety();
+	locations[6].z = temploc->Getz();
+	locations[6].rotatex = temploc->Getxrot();
+	locations[6].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_8");
+	locations[7].x = temploc->Getx();
+	locations[7].y = temploc->Gety();
+	locations[7].z = temploc->Getz();
+	locations[7].rotatex = temploc->Getxrot();
+	locations[7].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_9");
+	locations[8].x = temploc->Getx();
+	locations[8].y = temploc->Gety();
+	locations[8].z = temploc->Getz();
+	locations[8].rotatex = temploc->Getxrot();
+	locations[8].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_10");
+	locations[9].x = temploc->Getx();
+	locations[9].y = temploc->Gety();
+	locations[9].z = temploc->Getz();
+	locations[9].rotatex = temploc->Getxrot();
+	locations[9].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_11");
+	locations[10].x = temploc->Getx();
+	locations[10].y = temploc->Gety();
+	locations[10].z = temploc->Getz();
+	locations[10].rotatex = temploc->Getxrot();
+	locations[10].rotatey = temploc->Getyrot();
+
+
+	temploc = Robot->GetLocation("reach_eye.v3", "n_12");
+	locations[11].x = temploc->Getx();
+	locations[11].y = temploc->Gety();
+	locations[11].z = temploc->Getz();
+	locations[11].rotatex = temploc->Getxrot();
+	locations[11].rotatey = temploc->Getyrot();
+
+
 
 	/* initial position */
 	temploc = Robot->GetLocation("reach_eye.v3", "initial3");
-	locations[2].x= temploc->Getx(); 
-	locations[2].y= temploc->Gety(); 
-	locations[2].z= temploc->Getz(); 
-	locations[2].rotatex= temploc->Getxrot(); 
-	locations[2].rotatey= temploc->Getyrot(); 
+	locations[12].x= temploc->Getx(); 
+	locations[12].y= temploc->Gety(); 
+	locations[12].z= temploc->Getz(); 
+	locations[12].rotatex= temploc->Getxrot(); 
+	locations[12].rotatey= temploc->Getyrot(); 
 
 	/* safety position */
 	temploc = Robot->GetLocation("reach_eye.v3", "n_safe_l");
-	locations[3].x= temploc->Getx(); 
-	locations[3].y= temploc->Gety(); 
-	locations[3].z= temploc->Getz(); 
-	locations[3].rotatex= temploc->Getxrot(); 
-	locations[3].rotatey= temploc->Getyrot(); 
+	locations[13].x= temploc->Getx(); 
+	locations[13].y= temploc->Gety(); 
+	locations[13].z= temploc->Getz(); 
+	locations[13].rotatex= temploc->Getxrot(); 
+	locations[13].rotatey= temploc->Getyrot(); 
 
 	/* another safety position */
 	temploc = Robot->GetLocation("reach_eye.v3", "n_safe_r");
-	locations[4].x= temploc->Getx(); 
-	locations[4].y= temploc->Gety(); 
-	locations[4].z= temploc->Getz(); 
-	locations[4].rotatex= temploc->Getxrot(); 
-	locations[4].rotatey= temploc->Getyrot(); 
+	locations[14].x= temploc->Getx(); 
+	locations[14].y= temploc->Gety(); 
+	locations[14].z= temploc->Getz(); 
+	locations[14].rotatex= temploc->Getxrot(); 
+	locations[14].rotatey= temploc->Getyrot(); 
 
 	return 1;
 }
@@ -503,6 +577,34 @@ void CRobot_ReachingDlg::RandomizeLeds()
 void CRobot_ReachingDlg::OnBnClickedOk()
 {
 	OnOK();
+}
+
+void CRobot_ReachingDlg::DoEvent(int type, int para)
+{
+	/*** Robot operations ***/
+	//move to next location, play sound, record data until next trial is pressed again
+	float x,y,z,xro,yro;
+
+	int t;
+	switch (type)
+	{
+	case 0:
+		t = targetSeq[current_trial_counter][currentTarget] - 1;
+		x = (float) locations[t].x;
+		y = (float) locations[t].y;
+		z = (float) locations[t].z;
+		xro = (float) locations[t].rotatex;
+		yro = (float) locations[t].rotatey;
+		Robot->MoveTo_Actual_Point(x, y, z, xro, yro);
+		currentTarget++;
+		break;
+	case 1:
+		Robot->GPIO(15, para);
+		break;
+	case 2:
+		Robot->GPIO(14, para);
+		break;
+}
 }
 
 /*************** Start Trial ****************/
@@ -627,20 +729,14 @@ void CRobot_ReachingDlg::OnBnClickedButton1()
 	str += "Recording data...\n";
 	SetDlgItemText(IDC_STATIC2, str );
 
-	/*** Robot operations ***/
-	//move to next location, play sound, record data until next trial is pressed again
-	float x = (float) locations[current_trial[current_trial_counter]].x;
-	float y = (float) locations[current_trial[current_trial_counter]].y;
-	float z = (float) locations[current_trial[current_trial_counter]].z;
-	float xro = (float) locations[current_trial[current_trial_counter]].rotatex;
-	float yro = (float) locations[current_trial[current_trial_counter]].rotatey;
+
 
 	/*inc repetition for current location*/	
 	repetitions[current_trial[current_trial_counter]]++;
 
 	CString tempstr(""); 
-	tempstr.Format(_T("Trial #%d / %d \nMoving to: location #%d:\n x:%.2f, y:%.2f, z:%.2f, xrot:%.2f, yrot:%.2f"),
-		current_trial_counter+1,trialNum[condition_type - 1], current_trial[current_trial_counter]+1, x, y, z, xro, yro);
+//	tempstr.Format(_T("Trial #%d / %d \nMoving to: location #%d:\n x:%.2f, y:%.2f, z:%.2f, xrot:%.2f, yrot:%.2f"),
+//		current_trial_counter+1,trialNum[condition_type - 1], current_trial[current_trial_counter]+1, x, y, z, xro, yro);
 	SetDlgItemText(IDC_STATIC2, tempstr );
 	
 
@@ -651,55 +747,45 @@ void CRobot_ReachingDlg::OnBnClickedButton1()
 
 	if(condition_type==1)// remembered target, 100 ms target, no tone
 	{
+		for (int i=0; i<eventCount; ++i ) {
+			if (eventTime[i] < 0.001)
+			{
+				DoEvent(eventType[i], eventPara[i]);
+				continue;
+			}
+			do
+			{
+				QueryPerformanceCounter(&sample2);
+				elapsedTime = (sample2.QuadPart - sample1.QuadPart) / frequency.QuadPart;
+			}
+			while (elapsedTime <= eventTime[i]);//Sleep(1000);
+			DoEvent(eventType[i], eventPara[i]);
+		}
 		//hand LED on for 1 sec
-		Robot->MoveTo_Actual_Point(x, y, z, xro, yro);
-		Robot->GPIO(15, 1);
 
-		do
-		{
-		QueryPerformanceCounter(&sample2);
-		elapsedTime = (sample2.QuadPart - sample1.QuadPart) / frequency.QuadPart;
-		}
-		while (elapsedTime <= 1.0);//Sleep(1000);
-		Robot->GPIO(14, 1);
-		do
-		{
-		QueryPerformanceCounter(&sample2);
-		elapsedTime = (sample2.QuadPart - sample1.QuadPart) / frequency.QuadPart;
-		}
-		while (elapsedTime <= 2.0);//Sleep(1000);
 
-		Robot->GPIO(14, 0);
-
-		do
-		{
-		QueryPerformanceCounter(&sample2);
-		elapsedTime = (sample2.QuadPart - sample1.QuadPart) / frequency.QuadPart;
-		}
-		while (elapsedTime <= 7.0);
-		Robot->GPIO(15, 0);
-
-		if(current_trial[current_trial_counter]==2)// || current_trial[current_trial_counter]==3)
-		{
-			//robot moves out of the way
-			Robot->MoveTo_Actual_Point(locations[4].x, locations[4].y, locations[4].z, locations[4].rotatex, locations[4].rotatey);
-		}
-		else
-		{
-			//robot moves out of the way
-			Robot->MoveTo_Actual_Point(locations[3].x, locations[3].y, locations[3].z, locations[3].rotatex, locations[3].rotatey);
-		}
+		//if(current_trial[current_trial_counter]==2)// || current_trial[current_trial_counter]==3)
+		//{
+		//	//robot moves out of the way
+		//	Robot->MoveTo_Actual_Point(locations[4].x, locations[4].y, locations[4].z, locations[4].rotatex, locations[4].rotatey);
+		//}
+		//else
+		//{
+		//	//robot moves out of the way
+		//	Robot->MoveTo_Actual_Point(locations[3].x, locations[3].y, locations[3].z, locations[3].rotatex, locations[3].rotatey);
+		//}
 
 		//back to initial position
-		Sleep(TONE2END); 
-		Robot->MoveTo_Actual_Point(locations[2].x, locations[2].y, locations[2].z, locations[2].rotatex, locations[2].rotatey);
+		//Sleep(TONE2END); 
+		Robot->MoveTo_Actual_Point(locations[12].x, locations[12].y, locations[12].z, locations[12].rotatex, locations[12].rotatey);
 
 		CString str("");
 		str.Format(_T("\nBack to initial position:\nMoving to: x:%.2f, y:%.2f, z:%.2f, xrot:%.2f, yrot:%.2f"),
-			locations[2].x, locations[2].y, locations[2].z, locations[2].rotatex, locations[2].rotatey);
+			locations[12].x, locations[12].y, locations[12].z, locations[12].rotatex, locations[12].rotatey);
 		tempstr += str;
 		SetDlgItemText(IDC_STATIC2, tempstr );
 		current_trial_counter++;
+		currentTarget = 0;
 	}
 	else if (condition_type==2) 
 	{
@@ -928,13 +1014,36 @@ void CRobot_ReachingDlg::OnBnClickedButton2()
 	luaL_openlibs(L);
 
 	/* run the script */
-	luaL_dofile(L, "C:/lua/5.1/config.lua");
+	luaL_dofile(L, ".//config.lua");
 
 
 
 	/* Read the number of images */  
 	int luaInd = 888;
 	luaInd = lua_intexpr( L, "#config.eventType", &eventCount ) ; 
+
+	for (int i=0; i<eventCount; ++i ) {
+		char expr[64] = "" ;
+		sprintf( expr, "config.eventTime[%d]", i+1 );
+		lua_numberexpr( L, expr, &eventTime[i] );
+		sprintf( expr, "config.eventType[%d]", i+1 );
+		lua_intexpr( L, expr, &eventType[i] );
+		sprintf( expr, "config.eventPara[%d]", i+1 );
+		lua_intexpr( L, expr, &eventPara[i] );
+	}
+
+	lua_intexpr( L, "config.trialNum", &trialNum[condition_type - 1] );
+	lua_intexpr( L, "config.withinTrialTargetNum", &withinTrialTargetNum );
+
+	for (int i = 0; i < trialNum[condition_type - 1]; i++)
+	{
+		for (int j = 0; j < withinTrialTargetNum; j++)
+		{
+			char expr[64] = "" ;
+			sprintf( expr, "config.targetSeq[%d]", i * withinTrialTargetNum + j + 1);
+			lua_intexpr( L, expr, &targetSeq[i][j] );
+		}
+	}
 
 	/* cleanup Lua */
 	lua_close(L);
@@ -956,20 +1065,22 @@ void CRobot_ReachingDlg::OnBnClickedButton2()
 	//initialized = true;		//set flag if connected to tracker
 
 	CString tempstr,str("");
-	tempstr.Format(_T("%d"), eventCount);
-	tempstr = _T("=>Number of events = ") + tempstr + _T("\n=>Connecting to the Robot...\n");
+	tempstr.Format(_T("eventCount = %d\n"), eventCount);
+//	tempstr.Format(_T("config.targetSeq[%d][%d] = %d\n"), 0, 1, targetSeq[0][1]);
+	tempstr = _T("=>Time of events = ") + tempstr + 
+		_T("\n\n=>Connecting to the Robot...\n");
 	SetDlgItemText(IDC_STATIC2, tempstr );
 
 	/*Connect to robot*/
 	Robot = new Robot_Control();
 	int x = Robot->Initialize();
 	Initialize_locations();
-	Randomize_trials();
+	//Randomize_trials();
 	RandomizeLeds();
 	//Robot->Ready();		//move robot into Ready position
 	
 	/*move to initial position*/
-	Robot->MoveTo_Actual_Point(locations[2].x, locations[2].y, locations[2].z, locations[2].rotatex, locations[2].rotatey);
+	Robot->MoveTo_Actual_Point(locations[12].x, locations[12].y, locations[12].z, locations[12].rotatex, locations[12].rotatey);
 
 
 	tempstr += "Connected to the Robot...\n";
@@ -991,7 +1102,7 @@ void CRobot_ReachingDlg::OnBnClickedButton2()
 		locations[current_trial[current_trial_counter]].rotatex, locations[current_trial[current_trial_counter]].rotatey);
 	tstr += tempstr1;
 	tempstr1.Format(_T("\nSafe: \nMoving to: x:%.2f, y:%.2f, z:%.2f, xrot:%.2f, yrot:%.2f"),
-		 locations[2].x, locations[2].y, locations[2].z, locations[2].rotatex, locations[2].rotatey);
+		 locations[12].x, locations[12].y, locations[12].z, locations[12].rotatex, locations[12].rotatey);
 	tstr += tempstr1;
 	SetDlgItemText(IDC_STATIC2, tstr );
 

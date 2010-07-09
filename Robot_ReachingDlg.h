@@ -14,7 +14,8 @@ extern "C"
 }
 
 #define MAXTRIALS 90
-#define LOCATIONNUM 4
+#define MAXEVENTS 100
+#define LOCATIONNUM 100
 
 
 // CRobot_ReachingDlg dialog
@@ -51,8 +52,13 @@ public:
 	int current_leds[MAXTRIALS];
 //	int trialNum[4] = {30, 30, 60, 90};
 	int current_trial_counter;
+	int currentTarget;
 	int condition_type;
 	int eventCount;
+	double eventTime[MAXEVENTS];
+	int eventType[MAXEVENTS];
+	int eventPara[MAXEVENTS];
+
 	/* the Lua interpreter */
 	lua_State* L;
 	typedef struct
@@ -76,6 +82,8 @@ public:
 	afx_msg void OnBnClickedButton1();
 public:
 	afx_msg void OnBnClickedButton2();
+public:
+	void DoEvent(int type, int para);
 
 public:
 	CButton radbut1;
